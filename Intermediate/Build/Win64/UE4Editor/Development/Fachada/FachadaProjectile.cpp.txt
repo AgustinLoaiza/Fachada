@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Development\Fachada\Definitions.Fachada.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\FachadaProjectile.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\FachadaProjectile.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h

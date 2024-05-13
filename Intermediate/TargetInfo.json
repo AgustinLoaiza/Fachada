@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Fachada",
+			"Path": "C:\\Users\\User\\Desktop\\Facade\\Fachada\\Source\\Fachada.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "FachadaEditor",
+			"Path": "C:\\Users\\User\\Desktop\\Facade\\Fachada\\Source\\FachadaEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
