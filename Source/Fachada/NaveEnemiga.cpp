@@ -25,3 +25,15 @@ void ANaveEnemiga::Tick(float DeltaTime)
 
 }
 
+void ANaveEnemiga::Mover()
+{
+}
+
+void ANaveEnemiga::Disparar()
+{
+}
+
+void ANaveEnemiga::RecibirDanio()
+{
+}
+

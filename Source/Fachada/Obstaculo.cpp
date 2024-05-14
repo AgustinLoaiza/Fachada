@@ -25,3 +25,11 @@ void AObstaculo::Tick(float DeltaTime)
 
 }
 
+void AObstaculo::danio()
+{
+}
+
+void AObstaculo::mover()
+{
+}
+

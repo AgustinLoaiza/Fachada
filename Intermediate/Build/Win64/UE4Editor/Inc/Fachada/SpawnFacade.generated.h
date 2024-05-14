@@ -58,7 +58,10 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASpawnFacade)
 
 
-#define Fachada_Source_Fachada_SpawnFacade_h_12_PRIVATE_PROPERTY_OFFSET
+#define Fachada_Source_Fachada_SpawnFacade_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__SpawnObjects() { return STRUCT_OFFSET(ASpawnFacade, SpawnObjects); }
+
+
 #define Fachada_Source_Fachada_SpawnFacade_h_9_PROLOG
 #define Fachada_Source_Fachada_SpawnFacade_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

@@ -25,3 +25,21 @@ void ASpawnFacade::Tick(float DeltaTime)
 
 }
 
+
+
+void ASpawnFacade::SpawnearNaves()
+{
+}
+
+void ASpawnFacade::SpawnearObstaculos()
+{
+}
+
+void ASpawnFacade::SpawnearCapsula()
+{
+}
+
+void ASpawnFacade::PerformTask(TArray<class aNaveEnemiga*> _NavesEnemigas, TArray<class AObstaculo*> _Obstaculos, TArray<class ACapsula*> _Capsulas)
+{
+}
+

@@ -23,4 +23,20 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+protected:
+	//Lista de naves
+	TArray<class ANaveEnemiga*> NavesEnemigas;
+	TArray<class AObstaculo*> Obstaculos;
+	TArray<class ACapsula*> Capsulas;
+
+	UPROPERTY(EditAnywhere, Category = "Spawning")
+	TArray<AActor*> SpawnObjects;
+
+public:
+	void SpawnearNaves();
+	void SpawnearObstaculos();
+	void SpawnearCapsula();
+
+private:
+	void PerformTask(TArray<class aNaveEnemiga*> _NavesEnemigas, TArray<class AObstaculo*> _Obstaculos, TArray<class ACapsula*> _Capsulas);
 };

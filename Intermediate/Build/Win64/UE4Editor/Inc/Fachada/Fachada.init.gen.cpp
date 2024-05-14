@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeFachada_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xB215608D,
+				0x99F47E76,
 				0x68AAE412,
 				METADATA_PARAMS(nullptr, 0)
 			};

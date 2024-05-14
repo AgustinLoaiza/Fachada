@@ -23,4 +23,22 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"))
+	UStaticMeshComponent* mallaObstaculo;
+
+protected:
+	float danio;
+	float tiempoGeneracion;
+
+	float velocidad;
+
+	float limiteCaida;
+
+	FVector posicion;
+
+public:
+	virtual void danio();
+	virtual void mover();
+
 };

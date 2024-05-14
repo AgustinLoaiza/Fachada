@@ -25,3 +25,11 @@ void ACapsula::Tick(float DeltaTime)
 
 }
 
+void ACapsula::AgarrarCapsula()
+{
+}
+
+void ACapsula::SoltarCapsula()
+{
+}
+

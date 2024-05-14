@@ -23,4 +23,16 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+protected:
+	int cantidadBalas;
+	float Energia;
+	float velocidad;
+	float tiempoDisparo;
+
+public:
+
+	virtual void Mover();
+	virtual void Disparar();
+	virtual void RecibirDanio();
+
 };
