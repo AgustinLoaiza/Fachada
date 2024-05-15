@@ -13,28 +13,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FACHADA_NaveEnemiga_generated_h
 
-#define Fachada_Source_Fachada_NaveEnemiga_h_12_SPARSE_DATA
-#define Fachada_Source_Fachada_NaveEnemiga_h_12_RPC_WRAPPERS
-#define Fachada_Source_Fachada_NaveEnemiga_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define Fachada_Source_Fachada_NaveEnemiga_h_12_INCLASS_NO_PURE_DECLS \
+#define Fachada_Source_Fachada_NaveEnemiga_h_13_SPARSE_DATA
+#define Fachada_Source_Fachada_NaveEnemiga_h_13_RPC_WRAPPERS
+#define Fachada_Source_Fachada_NaveEnemiga_h_13_RPC_WRAPPERS_NO_PURE_DECLS
+#define Fachada_Source_Fachada_NaveEnemiga_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesANaveEnemiga(); \
 	friend struct Z_Construct_UClass_ANaveEnemiga_Statics; \
 public: \
-	DECLARE_CLASS(ANaveEnemiga, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Fachada"), NO_API) \
+	DECLARE_CLASS(ANaveEnemiga, AAccionesFacade, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Fachada"), NO_API) \
 	DECLARE_SERIALIZER(ANaveEnemiga)
 
 
-#define Fachada_Source_Fachada_NaveEnemiga_h_12_INCLASS \
+#define Fachada_Source_Fachada_NaveEnemiga_h_13_INCLASS \
 private: \
 	static void StaticRegisterNativesANaveEnemiga(); \
 	friend struct Z_Construct_UClass_ANaveEnemiga_Statics; \
 public: \
-	DECLARE_CLASS(ANaveEnemiga, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Fachada"), NO_API) \
+	DECLARE_CLASS(ANaveEnemiga, AAccionesFacade, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Fachada"), NO_API) \
 	DECLARE_SERIALIZER(ANaveEnemiga)
 
 
-#define Fachada_Source_Fachada_NaveEnemiga_h_12_STANDARD_CONSTRUCTORS \
+#define Fachada_Source_Fachada_NaveEnemiga_h_13_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ANaveEnemiga(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ANaveEnemiga) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define Fachada_Source_Fachada_NaveEnemiga_h_12_ENHANCED_CONSTRUCTORS \
+#define Fachada_Source_Fachada_NaveEnemiga_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ANaveEnemiga(ANaveEnemiga&&); \
@@ -58,28 +58,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ANaveEnemiga)
 
 
-#define Fachada_Source_Fachada_NaveEnemiga_h_12_PRIVATE_PROPERTY_OFFSET
-#define Fachada_Source_Fachada_NaveEnemiga_h_9_PROLOG
-#define Fachada_Source_Fachada_NaveEnemiga_h_12_GENERATED_BODY_LEGACY \
+#define Fachada_Source_Fachada_NaveEnemiga_h_13_PRIVATE_PROPERTY_OFFSET
+#define Fachada_Source_Fachada_NaveEnemiga_h_10_PROLOG
+#define Fachada_Source_Fachada_NaveEnemiga_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Fachada_Source_Fachada_NaveEnemiga_h_12_PRIVATE_PROPERTY_OFFSET \
-	Fachada_Source_Fachada_NaveEnemiga_h_12_SPARSE_DATA \
-	Fachada_Source_Fachada_NaveEnemiga_h_12_RPC_WRAPPERS \
-	Fachada_Source_Fachada_NaveEnemiga_h_12_INCLASS \
-	Fachada_Source_Fachada_NaveEnemiga_h_12_STANDARD_CONSTRUCTORS \
+	Fachada_Source_Fachada_NaveEnemiga_h_13_PRIVATE_PROPERTY_OFFSET \
+	Fachada_Source_Fachada_NaveEnemiga_h_13_SPARSE_DATA \
+	Fachada_Source_Fachada_NaveEnemiga_h_13_RPC_WRAPPERS \
+	Fachada_Source_Fachada_NaveEnemiga_h_13_INCLASS \
+	Fachada_Source_Fachada_NaveEnemiga_h_13_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Fachada_Source_Fachada_NaveEnemiga_h_12_GENERATED_BODY \
+#define Fachada_Source_Fachada_NaveEnemiga_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Fachada_Source_Fachada_NaveEnemiga_h_12_PRIVATE_PROPERTY_OFFSET \
-	Fachada_Source_Fachada_NaveEnemiga_h_12_SPARSE_DATA \
-	Fachada_Source_Fachada_NaveEnemiga_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	Fachada_Source_Fachada_NaveEnemiga_h_12_INCLASS_NO_PURE_DECLS \
-	Fachada_Source_Fachada_NaveEnemiga_h_12_ENHANCED_CONSTRUCTORS \
+	Fachada_Source_Fachada_NaveEnemiga_h_13_PRIVATE_PROPERTY_OFFSET \
+	Fachada_Source_Fachada_NaveEnemiga_h_13_SPARSE_DATA \
+	Fachada_Source_Fachada_NaveEnemiga_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	Fachada_Source_Fachada_NaveEnemiga_h_13_INCLASS_NO_PURE_DECLS \
+	Fachada_Source_Fachada_NaveEnemiga_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

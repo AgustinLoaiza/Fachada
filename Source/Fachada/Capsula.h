@@ -24,6 +24,6 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	virtual void AgarrarCapsula();
-	virtual void SoltarCapsula();
+	void AgarrarCapsula();
+	void SoltarCapsula();
 };

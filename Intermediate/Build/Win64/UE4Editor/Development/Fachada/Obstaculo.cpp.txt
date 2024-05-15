@@ -1,3 +1,5 @@
 C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Development\Fachada\Definitions.Fachada.h
 C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\Obstaculo.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\AccionesFacade.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\AccionesFacade.generated.h
 C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\Obstaculo.generated.h

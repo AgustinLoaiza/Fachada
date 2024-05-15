@@ -23,4 +23,16 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+public:
+	void Disparar();
+	void Moverse();
+	void Energia();
+
+	void AccionesAprobadas(const TArray<FString>& _Acciones);
+
+	/*virtual void Obligacion() PURE_VIRTUAL(AAccionesFacade::Obligacion;);
+	virtual FString TituloAstros() PURE_VIRTUAL(AAccionesFacade::TituloAstros;);*/
+
+private:
+	void ValidarAcciones(const FString& _Accion);
 };

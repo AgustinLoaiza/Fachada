@@ -34,3 +34,13 @@ void AObstaculo::mover()
 {
 }
 
+//void AObstaculo::Obligacion()
+//{
+//	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Crear Obstaculos"), *TituloAstros()));
+//}
+//
+//FString AObstaculo::TituloAstros()
+//{
+//	return "Obstaculo";
+//}
+

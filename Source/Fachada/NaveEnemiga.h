@@ -3,11 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+//#include "GameFramework/Actor.h"
+#include "AccionesFacade.h"
 #include "NaveEnemiga.generated.h"
 
 UCLASS()
-class FACHADA_API ANaveEnemiga : public AActor
+class FACHADA_API ANaveEnemiga : public AAccionesFacade //public AActor
 {
 	GENERATED_BODY()
 
@@ -35,8 +36,12 @@ protected:
 
 public:
 
-	virtual void Mover();
-	virtual void Disparar();
-	virtual void RecibirDanio();
+	void Mover();
+	void Disparar();
+	void RecibirDanio();
+
+public:
+	/*void Obligacion() override;
+	FString TituloAstros() override;*/
 
 };

@@ -3,11 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+//#include "GameFramework/Actor.h"
+#include "AccionesFacade.h"
 #include "Obstaculo.generated.h"
 
 UCLASS()
-class FACHADA_API AObstaculo : public AActor
+class FACHADA_API AObstaculo : public AAccionesFacade //public AActor
 {
 	GENERATED_BODY()
 	
@@ -41,4 +42,7 @@ public:
 	void energia();
 	void mover();
 
+public:
+	/*void Obligacion() override;
+	FString TituloAstros() override;*/
 };

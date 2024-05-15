@@ -37,3 +37,13 @@ void ANaveEnemiga::RecibirDanio()
 {
 }
 
+//void ANaveEnemiga::Obligacion()
+//{
+//	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Crear Naves"), *TituloAstros()));
+//}
+//
+//FString ANaveEnemiga::TituloAstros()
+//{
+//	return "NaveEnemiga";
+//}
+

@@ -15,7 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeObstaculo() {}
 // Cross Module References
 	FACHADA_API UClass* Z_Construct_UClass_AObstaculo_NoRegister();
 	FACHADA_API UClass* Z_Construct_UClass_AObstaculo();
-	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	FACHADA_API UClass* Z_Construct_UClass_AAccionesFacade();
 	UPackage* Z_Construct_UPackage__Script_Fachada();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
@@ -41,7 +41,7 @@ void EmptyLinkFunctionForGeneratedCodeObstaculo() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_AObstaculo_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_AActor,
+		(UObject* (*)())Z_Construct_UClass_AAccionesFacade,
 		(UObject* (*)())Z_Construct_UPackage__Script_Fachada,
 	};
 #if WITH_METADATA
@@ -89,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeObstaculo() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AObstaculo, 1888381884);
+	IMPLEMENT_CLASS(AObstaculo, 1083683511);
 	template<> FACHADA_API UClass* StaticClass<AObstaculo>()
 	{
 		return AObstaculo::StaticClass();

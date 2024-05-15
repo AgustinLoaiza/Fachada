@@ -25,3 +25,46 @@ void AAccionesFacade::Tick(float DeltaTime)
 
 }
 
+void AAccionesFacade::Disparar()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Disparar"));
+}
+
+void AAccionesFacade::Moverse()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Moverse"));
+}
+
+void AAccionesFacade::Energia()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Energia"));
+}
+
+void AAccionesFacade::AccionesAprobadas(const TArray<FString>& _Acciones)
+{
+	for(FString Acciones : _Acciones)
+	{
+		ValidarAcciones(Acciones);
+	}
+}
+
+void AAccionesFacade::ValidarAcciones(const FString& _Acciones)
+{
+	if(_Acciones == "Disparar")
+	{
+		Disparar();
+	}
+	else if(_Acciones == "Moverse")
+	{
+		Moverse();
+	}
+	else if(_Acciones == "Energia")
+	{
+		Energia();
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Accion no valida"));
+	}
+}
+

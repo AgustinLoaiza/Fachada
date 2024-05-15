@@ -1,10 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
+#include "SpawnFacade.h"
 #include "NaveEnemiga.h"
 #include "Obstaculo.h"
-#include "Capsula.h"
-#include "SpawnFacade.h"
+
+
 
 // Sets default values
 ASpawnFacade::ASpawnFacade()
@@ -19,6 +20,9 @@ void ASpawnFacade::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	//Inicializacion de los arrays
+	/*Astros = TArray<AAccionesFacade*>();
+	Acciones = TArray<FString*>();*/
 }
 
 // Called every frame
@@ -38,9 +42,9 @@ void ASpawnFacade::SpawnearObstaculos()
 {
 }
 
-void ASpawnFacade::SpawnearCapsula()
-{
-}
+//void ASpawnFacade::SpawnearCapsula()
+//{
+//}
 
 void ASpawnFacade::PerformTask(TArray<class AAccionesFacade*> _Astros, TArray<AActor*> _Acciones)
 {
