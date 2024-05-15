@@ -24,13 +24,19 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 protected:
-	//Lista de naves
-	TArray<class ANaveEnemiga*> NavesEnemigas;
-	TArray<class AObstaculo*> Obstaculos;
-	TArray<class ACapsula*> Capsulas;
+	//Lista de objetos a spawnear
+	//TArray<class AAccionesFacade> Astros;
 
-	UPROPERTY(EditAnywhere, Category = "Spawning")
-	TArray<AActor*> SpawnObjects;
+	UPROPERTY(EditAnywhere, Category = "FachadaSpawn")
+	TArray<FString> Acciones;
+
+protected:
+	UPROPERTY(VisibleAnywhere, Category = "FachadaSpawn")
+	class ANaveEnemiga* NaveEnemiga;
+	UPROPERTY(VisibleAnywhere, Category = "FachadaSpawn")
+	class AObstaculo* Obstaculo;
+	UPROPERTY(VisibleAnywhere, Category = "FachadaSpawn")
+	class ACapsula* Capsula;
 
 public:
 	void SpawnearNaves();
@@ -38,5 +44,5 @@ public:
 	void SpawnearCapsula();
 
 private:
-	void PerformTask(TArray<class aNaveEnemiga*> _NavesEnemigas, TArray<class AObstaculo*> _Obstaculos, TArray<class ACapsula*> _Capsulas);
+	void PerformTask(TArray<class AAccionesFacade*>_Astros, TArray<AActor*>_Acciones);
 };

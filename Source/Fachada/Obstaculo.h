@@ -38,7 +38,7 @@ protected:
 	FVector posicion;
 
 public:
-	virtual void danio();
-	virtual void mover();
+	void energia();
+	void mover();
 
 };

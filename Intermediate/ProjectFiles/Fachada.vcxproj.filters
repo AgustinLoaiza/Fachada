@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Fachada.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{448DAD8C-B2E3-4F7C-9BF7-15613D001456}</UniqueIdentifier>
+      <UniqueIdentifier>{BD665932-C0C4-4046-9680-B73A4F553CD6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Fachada.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,10 @@
     <None Include="..\..\Source\FachadaEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{363BAF93-1B60-46FC-A351-7F19C2730EA5}</UniqueIdentifier>
+      <UniqueIdentifier>{58118A0E-C777-472A-B916-BB5A5FF62060}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,8 +32,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Fachada">
-      <UniqueIdentifier>{B170CCAB-AB57-44A3-A322-0C7B37D6B67C}</UniqueIdentifier>
+      <UniqueIdentifier>{82773CF1-DC33-4AA2-B764-B6B9878B4F64}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Fachada\AccionesFacade.cpp">
+      <Filter>Source\Fachada</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Fachada\AccionesFacade.h">
+      <Filter>Source\Fachada</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Fachada\Capsula.cpp">
       <Filter>Source\Fachada</Filter>
     </ClCompile>

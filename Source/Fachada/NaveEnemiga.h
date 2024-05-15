@@ -10,7 +10,7 @@ UCLASS()
 class FACHADA_API ANaveEnemiga : public AActor
 {
 	GENERATED_BODY()
-	
+
 public:	
 	// Sets default values for this actor's properties
 	ANaveEnemiga();
@@ -22,6 +22,10 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"))
+	UStaticMeshComponent* mallaNaveEnemiga;
 
 protected:
 	int cantidadBalas;

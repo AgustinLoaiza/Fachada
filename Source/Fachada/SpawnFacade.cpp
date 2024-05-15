@@ -1,6 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
+#include "NaveEnemiga.h"
+#include "Obstaculo.h"
+#include "Capsula.h"
 #include "SpawnFacade.h"
 
 // Sets default values
@@ -39,7 +42,8 @@ void ASpawnFacade::SpawnearCapsula()
 {
 }
 
-void ASpawnFacade::PerformTask(TArray<class aNaveEnemiga*> _NavesEnemigas, TArray<class AObstaculo*> _Obstaculos, TArray<class ACapsula*> _Capsulas)
+void ASpawnFacade::PerformTask(TArray<class AAccionesFacade*> _Astros, TArray<AActor*> _Acciones)
 {
 }
+
 
