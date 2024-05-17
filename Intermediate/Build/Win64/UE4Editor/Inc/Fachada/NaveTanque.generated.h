@@ -36,7 +36,7 @@ public: \
 
 #define Fachada_Source_Fachada_NaveTanque_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ANaveTanque(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API ANaveTanque(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ANaveTanque) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ANaveTanque); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANaveTanque); \
@@ -48,8 +48,6 @@ public:
 
 
 #define Fachada_Source_Fachada_NaveTanque_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ANaveTanque() { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ANaveTanque(ANaveTanque&&); \

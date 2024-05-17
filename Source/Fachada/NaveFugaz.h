@@ -13,11 +13,28 @@ UCLASS()
 class FACHADA_API ANaveFugaz : public ANaveEnemiga
 {
 	GENERATED_BODY()
+
+public:
+	ANaveFugaz();
+
+public:
+	uint32 bCanFire : 1;
+
+	FVector GunOffset;
+
+	float FireRate;
+
+	int vida = 75;
+
+	FTimerHandle TimerHandle_ShotTimerExpired;
+
+	void ShotTimerExpired();
 	
 public:
 	void Mover(float DeltaTime) override;
-	void Disparar() override;
+	void Disparar(FVector FireDirection) override;
 	void RecibirDanio() override;
+	void Curarse() override;
 
 	void Obligacion() override;
 	FString TituloAstros() override;

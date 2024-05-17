@@ -24,24 +24,45 @@ void AAccionesFacade::BeginPlay()
 	Naves = TArray<ANaveEnemiga*>();
 	Acciones = TArray<FString>();
 
-	FVector ubicacionInicialNavesCazas = FVector(-300.0f, -1200.0f, 250.0f);
-	FVector ubicacionInicialNavesTanques = FVector(-300.0f, -1000.0f, 250.0f);
-	FVector ubicacionInicialNavesFugaces = FVector(-300.0f, -800.0f, 250.0f);
+	/*FVector ubicacionInicialNavesCazas = FVector(1000.0f, -150.0f, 250.0f);
+	FVector ubicacionInicialNavesTanques = FVector(800.0f, -150.0f, 250.0f);
+	FVector ubicacionInicialNavesFugaces = FVector(1200.0f, -250.0f, 250.0f);
 
-	for (int i = 0; i < 2; i++) {
-		FVector PosicionNaveActual = FVector(ubicacionInicialNavesCazas.X, ubicacionInicialNavesCazas.Y + i * 2200, ubicacionInicialNavesCazas.Z);
+	for (int i = 0; i < 5; i++) {
+		FVector PosicionNaveActual = FVector(ubicacionInicialNavesCazas.X, ubicacionInicialNavesCazas.Y + i * 150, ubicacionInicialNavesCazas.Z);
 		NaveCaza = GetWorld()->SpawnActor<ANaveCaza>(PosicionNaveActual, FRotator::ZeroRotator);
 		Naves.Add(NaveCaza);
 	}
 	for (int i = 0; i < 2; i++) {
-		FVector PosicionNaveActual = FVector(ubicacionInicialNavesTanques.X, ubicacionInicialNavesTanques.Y + i * 2200, ubicacionInicialNavesTanques.Z);
+		FVector PosicionNaveActual = FVector(ubicacionInicialNavesTanques.X, ubicacionInicialNavesTanques.Y + i * 400, ubicacionInicialNavesTanques.Z);
 		NaveTanque = GetWorld()->SpawnActor<ANaveTanque>(PosicionNaveActual, FRotator::ZeroRotator);
 		Naves.Add(NaveTanque);
 	}
 	for (int i = 0; i < 2; i++) {
-		FVector PosicionNaveActual = FVector(ubicacionInicialNavesFugaces.X, ubicacionInicialNavesFugaces.Y + i * 2200, ubicacionInicialNavesFugaces.Z);
+		FVector PosicionNaveActual = FVector(ubicacionInicialNavesFugaces.X, ubicacionInicialNavesFugaces.Y + i * 2000, ubicacionInicialNavesFugaces.Z);
 		NaveFugaz = GetWorld()->SpawnActor<ANaveFugaz>(PosicionNaveActual, FRotator::ZeroRotator);
 		Naves.Add(NaveFugaz);
+	}*/
+	FVector ubicacionInicialNavesCazas = FVector(1000.0f, -150.0f, 250.0f);
+	FVector ubicacionInicialNavesTanques = FVector(800.0f, -150.0f, 250.0f);
+	FVector ubicacionInicialNavesFugaces = FVector(1200.0f, -450.0f, 250.0f);
+
+	for (int i = 0; i < 5; i++) {
+		FVector PosicionNaveActual = FVector(ubicacionInicialNavesCazas.X, ubicacionInicialNavesCazas.Y + i * 200, ubicacionInicialNavesCazas.Z);
+		NaveCaza = GetWorld()->SpawnActor<ANaveCaza>(PosicionNaveActual, FRotator::ZeroRotator);
+		Naves.Add(NaveCaza);
+	}
+
+	for (int i = 0; i < 2; i++) {
+		FVector PosicionNaveActual = FVector(ubicacionInicialNavesTanques.X, ubicacionInicialNavesTanques.Y + i * 500, ubicacionInicialNavesTanques.Z);
+		NaveTanque = GetWorld()->SpawnActor<ANaveTanque>(PosicionNaveActual, FRotator::ZeroRotator);
+		Naves.Add(NaveTanque);
+	}
+
+	for (int i = 0; i < 2; i++) {
+		FVector PosicionNaveActual = FVector(ubicacionInicialNavesFugaces.X, ubicacionInicialNavesFugaces.Y + i * 300, ubicacionInicialNavesFugaces.Z);
+		NaveFugaz = GetWorld()->SpawnActor<ANaveFugaz>(PosicionNaveActual, FRotator::ZeroRotator); 
+		Naves.Add(NaveFugaz); 
 	}
 }
 

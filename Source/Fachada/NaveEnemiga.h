@@ -38,8 +38,9 @@ protected:
 public:
 
 	virtual void Mover(float DeltaTime) PURE_VIRTUAL(ANaveEnemiga::Mover,); 
-	virtual void Disparar() PURE_VIRTUAL(ANaveEnemiga::Disparar,);
+	virtual void Disparar(FVector FireDiretion) PURE_VIRTUAL(ANaveEnemiga::Disparar,);
 	virtual void RecibirDanio() PURE_VIRTUAL(ANaveEnemiga::RecibirDanio,); 
+	virtual void Curarse() PURE_VIRTUAL(ANaveEnemiga::Curarse,);
 
 public:
 	virtual void Obligacion() PURE_VIRTUAL(AAccionesFacade::Obligacion;);

@@ -30,15 +30,16 @@ void ANaveEnemiga::ValidarAcciones(const FString& _Acciones)
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Acciones: ") + _Acciones);
 	if (_Acciones == "Disparar")
 	{
-		Disparar();
+		Disparar(FVector(-5.0f, 0.0f, 0.0f));
 	}
 	else if (_Acciones == "Moverse")
 	{
 		bcanMove = true;
+		Mover(1.0f);
 	}
 	else if (_Acciones == "Energia")
 	{
-		RecibirDanio();
+		Curarse();
 	}
 	else
 	{

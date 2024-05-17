@@ -14,10 +14,31 @@ class FACHADA_API ANaveTanque : public ANaveEnemiga
 {
 	GENERATED_BODY()
 
+public:
+	ANaveTanque();
+
+public:
+	uint32 bCanFire : 1;
+
+	FVector GunOffset;
+
+	float FireRate;
+
+	int vida = 150;
+
+	FTimerHandle TimerHandle_ShotTimerExpired;
+
+	void ShotTimerExpired();
+
+private:
+	float CentroX = 0.0f;  // Coordenada X del centro de la circunferencia
+	float CentroY = 0.0f;  // Coordenada Y del centro de la circunferencia
+
 public: 
 	void Mover(float DeltaTime) override;
-	void Disparar() override;
+	void Disparar(FVector FireDirection) override;
 	void RecibirDanio() override;
+	void Curarse() override;
 
 	void Obligacion() override;
 	FString TituloAstros() override;
