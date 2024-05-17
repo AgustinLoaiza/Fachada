@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeSpawnFacade() {}
 	UPackage* Z_Construct_UPackage__Script_Fachada();
 	FACHADA_API UClass* Z_Construct_UClass_ANaveEnemiga_NoRegister();
 	FACHADA_API UClass* Z_Construct_UClass_AObstaculo_NoRegister();
+	FACHADA_API UClass* Z_Construct_UClass_ACapsulas_NoRegister();
 // End Cross Module References
 	void ASpawnFacade::StaticRegisterNativesASpawnFacade()
 	{
@@ -46,6 +47,10 @@ void EmptyLinkFunctionForGeneratedCodeSpawnFacade() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Obstaculo_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Obstaculo;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Capsula_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Capsula;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -84,11 +89,19 @@ void EmptyLinkFunctionForGeneratedCodeSpawnFacade() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpawnFacade_Statics::NewProp_Obstaculo = { "Obstaculo", nullptr, (EPropertyFlags)0x0020080000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASpawnFacade, Obstaculo), Z_Construct_UClass_AObstaculo_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASpawnFacade_Statics::NewProp_Obstaculo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnFacade_Statics::NewProp_Obstaculo_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpawnFacade_Statics::NewProp_Capsula_MetaData[] = {
+		{ "Category", "FachadaSpawn" },
+		{ "ModuleRelativePath", "SpawnFacade.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpawnFacade_Statics::NewProp_Capsula = { "Capsula", nullptr, (EPropertyFlags)0x0020080000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASpawnFacade, Capsula), Z_Construct_UClass_ACapsulas_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASpawnFacade_Statics::NewProp_Capsula_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASpawnFacade_Statics::NewProp_Capsula_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASpawnFacade_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnFacade_Statics::NewProp_Acciones_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnFacade_Statics::NewProp_Acciones,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnFacade_Statics::NewProp_NaveEnemiga,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnFacade_Statics::NewProp_Obstaculo,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpawnFacade_Statics::NewProp_Capsula,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASpawnFacade_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASpawnFacade>::IsAbstract,
@@ -117,7 +130,7 @@ void EmptyLinkFunctionForGeneratedCodeSpawnFacade() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASpawnFacade, 4182551529);
+	IMPLEMENT_CLASS(ASpawnFacade, 716687527);
 	template<> FACHADA_API UClass* StaticClass<ASpawnFacade>()
 	{
 		return ASpawnFacade::StaticClass();

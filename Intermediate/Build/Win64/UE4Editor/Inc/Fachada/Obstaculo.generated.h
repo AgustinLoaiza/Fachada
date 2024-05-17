@@ -21,7 +21,7 @@ private: \
 	static void StaticRegisterNativesAObstaculo(); \
 	friend struct Z_Construct_UClass_AObstaculo_Statics; \
 public: \
-	DECLARE_CLASS(AObstaculo, AAccionesFacade, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Fachada"), NO_API) \
+	DECLARE_CLASS(AObstaculo, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Fachada"), NO_API) \
 	DECLARE_SERIALIZER(AObstaculo)
 
 
@@ -30,7 +30,7 @@ private: \
 	static void StaticRegisterNativesAObstaculo(); \
 	friend struct Z_Construct_UClass_AObstaculo_Statics; \
 public: \
-	DECLARE_CLASS(AObstaculo, AAccionesFacade, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Fachada"), NO_API) \
+	DECLARE_CLASS(AObstaculo, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Fachada"), NO_API) \
 	DECLARE_SERIALIZER(AObstaculo)
 
 

@@ -3,12 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-//#include "GameFramework/Actor.h"
-#include "AccionesFacade.h"
+#include "GameFramework/Actor.h"
+//#include "AccionesFacade.h"
 #include "NaveEnemiga.generated.h"
 
 UCLASS()
-class FACHADA_API ANaveEnemiga : public AAccionesFacade //public AActor
+class FACHADA_API ANaveEnemiga : public AActor //public AAccionesFacade 
 {
 	GENERATED_BODY()
 
@@ -24,6 +24,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* mallaNaveEnemiga;
@@ -36,12 +37,20 @@ protected:
 
 public:
 
-	void Mover();
-	void Disparar();
-	void RecibirDanio();
+	virtual void Mover(float DeltaTime) PURE_VIRTUAL(ANaveEnemiga::Mover,); 
+	virtual void Disparar() PURE_VIRTUAL(ANaveEnemiga::Disparar,);
+	virtual void RecibirDanio() PURE_VIRTUAL(ANaveEnemiga::RecibirDanio,); 
 
 public:
-	/*void Obligacion() override;
-	FString TituloAstros() override;*/
+	virtual void Obligacion() PURE_VIRTUAL(AAccionesFacade::Obligacion;);
+	virtual FString TituloAstros() PURE_VIRTUAL(AAccionesFacade::TituloAstros, return "";);
+
+
+	bool bcanMove = false;
+
+public:
+	void ValidarAcciones(const FString& _Accion);
+	void Acciones(const TArray<FString>& _Acciones);
+
 
 };

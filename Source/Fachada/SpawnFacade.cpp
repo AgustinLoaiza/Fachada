@@ -3,7 +3,13 @@
 
 #include "SpawnFacade.h"
 #include "NaveEnemiga.h"
+#include "NaveCaza.h"
+#include "NaveTanque.h"
+#include "NaveFugaz.h"
 #include "Obstaculo.h"
+#include "Meteoro.h"
+#include "Cometa.h"
+#include "Capsulas.h"
 
 
 
@@ -20,9 +26,6 @@ void ASpawnFacade::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	//Inicializacion de los arrays
-	/*Astros = TArray<AAccionesFacade*>();
-	Acciones = TArray<FString*>();*/
 }
 
 // Called every frame
@@ -42,11 +45,11 @@ void ASpawnFacade::SpawnearObstaculos()
 {
 }
 
-//void ASpawnFacade::SpawnearCapsula()
-//{
-//}
+void ASpawnFacade::SpawnearCapsulas()
+{
+}
 
-void ASpawnFacade::PerformTask(TArray<class AAccionesFacade*> _Astros, TArray<AActor*> _Acciones)
+void ASpawnFacade::PerformTask(TArray<class AAccionesFacade*> _Astros, TArray<FString> _Acciones)
 {
 }
 

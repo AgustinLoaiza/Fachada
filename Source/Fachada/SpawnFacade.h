@@ -30,19 +30,20 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "FachadaSpawn")
 	TArray<FString> Acciones;
 
+	TArray<class ANaveEnemiga*> Astros;
 protected:
 	UPROPERTY(VisibleAnywhere, Category = "FachadaSpawn")
 	class ANaveEnemiga* NaveEnemiga;
 	UPROPERTY(VisibleAnywhere, Category = "FachadaSpawn")
 	class AObstaculo* Obstaculo;
-	/*UPROPERTY(VisibleAnywhere, Category = "FachadaSpawn")
-	class ACapsulas* Capsula;*/
+	UPROPERTY(VisibleAnywhere, Category = "FachadaSpawn")
+	class ACapsulas* Capsula;
 
 public:
 	void SpawnearNaves();
 	void SpawnearObstaculos();
-	//void SpawnearCapsula();
+	void SpawnearCapsulas();
 
 private:
-	void PerformTask(TArray<class AAccionesFacade*>_Astros, TArray<AActor*>_Acciones);
+	void PerformTask(TArray<class AAccionesFacade*>_Astros, TArray<FString>_Acciones);
 };

@@ -15,7 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemiga() {}
 // Cross Module References
 	FACHADA_API UClass* Z_Construct_UClass_ANaveEnemiga_NoRegister();
 	FACHADA_API UClass* Z_Construct_UClass_ANaveEnemiga();
-	FACHADA_API UClass* Z_Construct_UClass_AAccionesFacade();
+	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_Fachada();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
@@ -41,7 +41,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemiga() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_ANaveEnemiga_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_AAccionesFacade,
+		(UObject* (*)())Z_Construct_UClass_AActor,
 		(UObject* (*)())Z_Construct_UPackage__Script_Fachada,
 	};
 #if WITH_METADATA
@@ -89,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeNaveEnemiga() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANaveEnemiga, 1517248983);
+	IMPLEMENT_CLASS(ANaveEnemiga, 1342597626);
 	template<> FACHADA_API UClass* StaticClass<ANaveEnemiga>()
 	{
 		return ANaveEnemiga::StaticClass();

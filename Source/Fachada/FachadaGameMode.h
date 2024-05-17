@@ -13,6 +13,17 @@ class AFachadaGameMode : public AGameModeBase
 
 public:
 	AFachadaGameMode();
+
+protected:
+	virtual void BeginPlay() override;
+
+public:
+	virtual void Tick(float DeltaTime) override;
+
+public:
+	class AAccionesFacade* AccionesFacade;
+
+	float Temporizador;
 };
 
 

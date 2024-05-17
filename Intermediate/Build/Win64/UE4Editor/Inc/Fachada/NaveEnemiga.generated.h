@@ -21,7 +21,7 @@ private: \
 	static void StaticRegisterNativesANaveEnemiga(); \
 	friend struct Z_Construct_UClass_ANaveEnemiga_Statics; \
 public: \
-	DECLARE_CLASS(ANaveEnemiga, AAccionesFacade, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Fachada"), NO_API) \
+	DECLARE_CLASS(ANaveEnemiga, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Fachada"), NO_API) \
 	DECLARE_SERIALIZER(ANaveEnemiga)
 
 
@@ -30,7 +30,7 @@ private: \
 	static void StaticRegisterNativesANaveEnemiga(); \
 	friend struct Z_Construct_UClass_ANaveEnemiga_Statics; \
 public: \
-	DECLARE_CLASS(ANaveEnemiga, AAccionesFacade, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Fachada"), NO_API) \
+	DECLARE_CLASS(ANaveEnemiga, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Fachada"), NO_API) \
 	DECLARE_SERIALIZER(ANaveEnemiga)
 
 

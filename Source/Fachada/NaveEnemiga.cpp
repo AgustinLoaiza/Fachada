@@ -25,25 +25,31 @@ void ANaveEnemiga::Tick(float DeltaTime)
 
 }
 
-void ANaveEnemiga::Mover()
+void ANaveEnemiga::ValidarAcciones(const FString& _Acciones)
 {
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Acciones: ") + _Acciones);
+	if (_Acciones == "Disparar")
+	{
+		Disparar();
+	}
+	else if (_Acciones == "Moverse")
+	{
+		bcanMove = true;
+	}
+	else if (_Acciones == "Energia")
+	{
+		RecibirDanio();
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Accion no valida"));
+	}
 }
 
-void ANaveEnemiga::Disparar()
+void ANaveEnemiga::Acciones(const TArray<FString>& _Acciones)
 {
+	for (const FString& Accion : _Acciones) 
+	{
+		ValidarAcciones(Accion); 
+	}
 }
-
-void ANaveEnemiga::RecibirDanio()
-{
-}
-
-//void ANaveEnemiga::Obligacion()
-//{
-//	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Crear Naves"), *TituloAstros()));
-//}
-//
-//FString ANaveEnemiga::TituloAstros()
-//{
-//	return "NaveEnemiga";
-//}
-

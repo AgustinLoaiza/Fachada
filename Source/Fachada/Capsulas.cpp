@@ -3,3 +3,14 @@
 
 #include "Capsulas.h"
 
+ACapsulas::ACapsulas()
+{
+}
+
+void ACapsulas::PickUp()
+{
+}
+
+void ACapsulas::PutDown(FTransform TargetLocation)
+{
+}

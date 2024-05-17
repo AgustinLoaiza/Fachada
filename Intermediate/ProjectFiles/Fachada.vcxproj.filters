@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Fachada.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{703760DB-DE4A-4EE5-A894-3E4777FDADCD}</UniqueIdentifier>
+      <UniqueIdentifier>{70F2A0DA-8C34-4012-9070-A83646EFD85C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Fachada.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{B06189AB-1D81-41F6-B99F-7E956E6C6C88}</UniqueIdentifier>
+      <UniqueIdentifier>{12CD7038-8E20-4016-B780-376B1F476CFC}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Fachada">
-      <UniqueIdentifier>{5C39A4EA-F40C-4BB9-A0ED-DA2818B9EC7A}</UniqueIdentifier>
+      <UniqueIdentifier>{FB82CE1F-3E34-48C7-ABA4-165CFBD7C451}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Fachada\AccionesFacade.cpp">
       <Filter>Source\Fachada</Filter>
@@ -50,6 +50,24 @@
       <Filter>Source\Fachada</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Fachada\Capsulas.h">
+      <Filter>Source\Fachada</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Fachada\CapsulaVelocidad.cpp">
+      <Filter>Source\Fachada</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Fachada\CapsulaVelocidad.h">
+      <Filter>Source\Fachada</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Fachada\Cometa.cpp">
+      <Filter>Source\Fachada</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Fachada\Cometa.h">
+      <Filter>Source\Fachada</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Fachada\ComponenteCapsulas.cpp">
+      <Filter>Source\Fachada</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Fachada\ComponenteCapsulas.h">
       <Filter>Source\Fachada</Filter>
     </ClInclude>
     <None Include="..\..\Source\Fachada\Fachada.Build.cs">
@@ -79,10 +97,34 @@
     <ClInclude Include="..\..\Source\Fachada\FachadaProjectile.h">
       <Filter>Source\Fachada</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Fachada\Meteoro.cpp">
+      <Filter>Source\Fachada</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Fachada\Meteoro.h">
+      <Filter>Source\Fachada</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Fachada\NaveCaza.cpp">
+      <Filter>Source\Fachada</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Fachada\NaveCaza.h">
+      <Filter>Source\Fachada</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Fachada\NaveEnemiga.cpp">
       <Filter>Source\Fachada</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Fachada\NaveEnemiga.h">
+      <Filter>Source\Fachada</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Fachada\NaveFugaz.cpp">
+      <Filter>Source\Fachada</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Fachada\NaveFugaz.h">
+      <Filter>Source\Fachada</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Fachada\NaveTanque.cpp">
+      <Filter>Source\Fachada</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Fachada\NaveTanque.h">
       <Filter>Source\Fachada</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Fachada\Obstaculo.cpp">

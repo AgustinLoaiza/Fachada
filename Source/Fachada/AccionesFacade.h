@@ -24,15 +24,16 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	void Disparar();
-	void Moverse();
-	void Energia();
+	void EstrategiaOfensiva();
+	void EstrategiaDefensiva();
+	void EstrategiaAgresiva();
 
-	void AccionesAprobadas(const TArray<FString>& _Acciones);
+	void RealizarAcciones(TArray<FString>_Acciones, TArray<class ANaveEnemiga*>_Naves);
 
-	/*virtual void Obligacion() PURE_VIRTUAL(AAccionesFacade::Obligacion;);
-	virtual FString TituloAstros() PURE_VIRTUAL(AAccionesFacade::TituloAstros;);*/
+	TArray<FString> Acciones;
+	TArray<class ANaveEnemiga*> Naves;
 
-private:
-	void ValidarAcciones(const FString& _Accion);
+	class ANaveCaza* NaveCaza;
+	class ANaveTanque* NaveTanque;
+	class ANaveFugaz* NaveFugaz;
 };

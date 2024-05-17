@@ -3,12 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-//#include "GameFramework/Actor.h"
-#include "AccionesFacade.h"
+#include "GameFramework/Actor.h"
+//#include "AccionesFacade.h"
 #include "Obstaculo.generated.h"
 
 UCLASS()
-class FACHADA_API AObstaculo : public AAccionesFacade //public AActor
+class FACHADA_API AObstaculo : public AActor //public AAccionesFacade 
 {
 	GENERATED_BODY()
 	
@@ -39,8 +39,8 @@ protected:
 	FVector posicion;
 
 public:
-	void energia();
-	void mover();
+	void energia() PURE_VIRTUAL(AObstaculo::energia,);
+	void mover(float DeltaTime) PURE_VIRTUAL(AObstaculo::mover,);
 
 public:
 	/*void Obligacion() override;

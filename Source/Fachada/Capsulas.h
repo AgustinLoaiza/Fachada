@@ -14,4 +14,10 @@ class FACHADA_API ACapsulas : public AStaticMeshActor
 {
 	GENERATED_BODY()
 	
+public:
+	UStaticMeshComponent* MeshCapsula;
+	ACapsulas();
+
+	virtual void PickUp();
+	virtual void PutDown(FTransform TargetLocation);
 };

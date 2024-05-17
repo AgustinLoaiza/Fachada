@@ -2,6 +2,4 @@ C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Developm
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
 C:\Users\User\Desktop\Facade\Fachada\Source\Fachada/Obstaculo.h
-C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\AccionesFacade.h
-C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\AccionesFacade.generated.h
 C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\Obstaculo.generated.h

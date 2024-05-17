@@ -1,0 +1,3 @@
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Development\Fachada\Definitions.Fachada.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\ComponenteCapsulas.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\ComponenteCapsulas.generated.h

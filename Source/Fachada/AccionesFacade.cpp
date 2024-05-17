@@ -2,6 +2,10 @@
 
 
 #include "AccionesFacade.h"
+#include "NaveEnemiga.h"
+#include "NaveCaza.h"
+#include "NaveTanque.h"
+#include "NaveFugaz.h"
 
 // Sets default values
 AAccionesFacade::AAccionesFacade()
@@ -16,6 +20,29 @@ void AAccionesFacade::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	//Inicializacion de los arrays
+	Naves = TArray<ANaveEnemiga*>();
+	Acciones = TArray<FString>();
+
+	FVector ubicacionInicialNavesCazas = FVector(-300.0f, -1200.0f, 250.0f);
+	FVector ubicacionInicialNavesTanques = FVector(-300.0f, -1000.0f, 250.0f);
+	FVector ubicacionInicialNavesFugaces = FVector(-300.0f, -800.0f, 250.0f);
+
+	for (int i = 0; i < 2; i++) {
+		FVector PosicionNaveActual = FVector(ubicacionInicialNavesCazas.X, ubicacionInicialNavesCazas.Y + i * 2200, ubicacionInicialNavesCazas.Z);
+		NaveCaza = GetWorld()->SpawnActor<ANaveCaza>(PosicionNaveActual, FRotator::ZeroRotator);
+		Naves.Add(NaveCaza);
+	}
+	for (int i = 0; i < 2; i++) {
+		FVector PosicionNaveActual = FVector(ubicacionInicialNavesTanques.X, ubicacionInicialNavesTanques.Y + i * 2200, ubicacionInicialNavesTanques.Z);
+		NaveTanque = GetWorld()->SpawnActor<ANaveTanque>(PosicionNaveActual, FRotator::ZeroRotator);
+		Naves.Add(NaveTanque);
+	}
+	for (int i = 0; i < 2; i++) {
+		FVector PosicionNaveActual = FVector(ubicacionInicialNavesFugaces.X, ubicacionInicialNavesFugaces.Y + i * 2200, ubicacionInicialNavesFugaces.Z);
+		NaveFugaz = GetWorld()->SpawnActor<ANaveFugaz>(PosicionNaveActual, FRotator::ZeroRotator);
+		Naves.Add(NaveFugaz);
+	}
 }
 
 // Called every frame
@@ -25,46 +52,44 @@ void AAccionesFacade::Tick(float DeltaTime)
 
 }
 
-void AAccionesFacade::Disparar()
+void AAccionesFacade::EstrategiaOfensiva()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Disparar"));
+	Acciones.Empty();
+	Acciones.Add("Disparar");
+	Acciones.Add("Moverse");
+	Acciones.Add("Energia");
+	RealizarAcciones(Acciones, Naves);
 }
 
-void AAccionesFacade::Moverse()
+void AAccionesFacade::EstrategiaDefensiva()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Moverse"));
+	Acciones.Empty();
+	Acciones.Add("Energia");
+	Acciones.Add("Moverse");
+	RealizarAcciones(Acciones, Naves);
 }
 
-void AAccionesFacade::Energia()
+void AAccionesFacade::EstrategiaAgresiva()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Energia"));
+	Acciones.Empty();
+	Acciones.Add("Disparar");
+	Acciones.Add("Moverse");
+	RealizarAcciones(Acciones, Naves);
 }
 
-void AAccionesFacade::AccionesAprobadas(const TArray<FString>& _Acciones)
+void AAccionesFacade::RealizarAcciones(TArray<FString> _Acciones, TArray<class ANaveEnemiga*> _Naves)
 {
-	for(FString Acciones : _Acciones)
+	for (ANaveEnemiga* Nave : _Naves)
 	{
-		ValidarAcciones(Acciones);
+		Nave->Acciones(_Acciones);
 	}
 }
 
-void AAccionesFacade::ValidarAcciones(const FString& _Acciones)
-{
-	if(_Acciones == "Disparar")
-	{
-		Disparar();
-	}
-	else if(_Acciones == "Moverse")
-	{
-		Moverse();
-	}
-	else if(_Acciones == "Energia")
-	{
-		Energia();
-	}
-	else
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Accion no valida"));
-	}
-}
+
+
+
+
+
+
+
 

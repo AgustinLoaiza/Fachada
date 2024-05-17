@@ -26,13 +26,13 @@ void AObstaculo::Tick(float DeltaTime)
 }
 
 
-void AObstaculo::energia()
-{
-}
-
-void AObstaculo::mover()
-{
-}
+//void AObstaculo::energia()
+//{
+//}
+//
+//void AObstaculo::mover(float DeltaTime)
+//{
+//}
 
 //void AObstaculo::Obligacion()
 //{
