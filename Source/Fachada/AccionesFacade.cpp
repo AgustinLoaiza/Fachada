@@ -78,7 +78,6 @@ void AAccionesFacade::EstrategiaOfensiva()
 	Acciones.Empty();
 	Acciones.Add("Disparar");
 	Acciones.Add("Moverse");
-	Acciones.Add("Energia");
 	RealizarAcciones(Acciones, Naves);
 }
 
@@ -86,7 +85,6 @@ void AAccionesFacade::EstrategiaDefensiva()
 {
 	Acciones.Empty();
 	Acciones.Add("Energia");
-	Acciones.Add("Moverse");
 	RealizarAcciones(Acciones, Naves);
 }
 
@@ -95,6 +93,7 @@ void AAccionesFacade::EstrategiaAgresiva()
 	Acciones.Empty();
 	Acciones.Add("Disparar");
 	Acciones.Add("Moverse");
+	Acciones.Add("Energia");
 	RealizarAcciones(Acciones, Naves);
 }
 

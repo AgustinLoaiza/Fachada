@@ -5,3 +5,5 @@ C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fach
 C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\NaveTanque.generated.h
 C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\FachadaProjectile.h
 C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\FachadaProjectile.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\Escudo.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\Escudo.generated.h

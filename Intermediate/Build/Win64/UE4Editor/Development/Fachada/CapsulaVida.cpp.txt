@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Development\Fachada\Definitions.Fachada.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\CapsulaVida.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\Capsulas.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/StaticMeshActor.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\Capsulas.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\CapsulaVida.generated.h

@@ -84,7 +84,7 @@ void ANaveCaza::Obligacion()
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("NaveCaza::Obligacion"));
 }
 
-FString ANaveCaza::TituloAstros()
+FString ANaveCaza::TituloNaves()
 {
     return "Nave Caza";
 }

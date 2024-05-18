@@ -3,6 +3,7 @@
 
 #include "NaveTanque.h"
 #include "FachadaProjectile.h"
+#include "Escudo.h"
 
 ANaveTanque::ANaveTanque()
 {
@@ -21,41 +22,61 @@ ANaveTanque::ANaveTanque()
 
 void ANaveTanque::Mover(float DeltaTime)
 {
-    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("NaveTanque::Mover"));
-	float Radio = 100.0f;
-	float VelocidadAngular = 1.0f;  // Radianes por segundo
-	float Tiempo = GetWorld()->GetTimeSeconds();  // Obtener el tiempo actual del juego
-
-	// Calcular las nuevas coordenadas en el plano XY
-	float NuevaX = CentroX + Radio * FMath::Cos(Tiempo * VelocidadAngular);
-	float NuevaY = CentroY + Radio * FMath::Sin(Tiempo * VelocidadAngular);
-
-	// Obtener la ubicación actual del actor
 	FVector Coordenada = GetActorLocation();
-
-	// Calcular la nueva ubicación manteniendo Z constante
-	FVector NewLocation = FVector(NuevaX, NuevaY, Coordenada.Z);
-
-	// Establecer la nueva ubicación del actor
+	float posicion = velocidad * DeltaTime;
+	FVector NewLocation = FVector(Coordenada.X - velocidad, Coordenada.Y, Coordenada.Z);
 	SetActorLocation(NewLocation);
 }
 
 void ANaveTanque::Disparar(FVector FireDirection)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("NaveTanque::Disparar"));
+	if (bCanFire == true)
+	{
+		// If we are pressing fire stick in a direction
+		if (FireDirection.SizeSquared() > 0.0f)
+		{
+			const FRotator FireRotation = FireDirection.Rotation();
+			// Spawn projectile at an offset from this pawn
+			const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
+
+			UWorld* const World = GetWorld();
+			if (World != nullptr)
+			{
+				// spawn the projectile
+				World->SpawnActor<AFachadaProjectile>(SpawnLocation, FireRotation);
+
+
+			}
+			bCanFire = false;
+			World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &ANaveTanque::ShotTimerExpired, FireRate);
+
+			bCanFire = false;
+
+		}
+	}
 }
 
 void ANaveTanque::ShotTimerExpired()
 {
+	bCanFire = true;
 }
 
 void ANaveTanque::RecibirDanio()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("NaveTanque:: Danio"));
+	vida -= 5;
+	if (vida <= 0)
+	{
+		Destroy();
+	}
 }
 
 void ANaveTanque::Curarse()
 {
+	vida += 25;
+
+	/*FVector UbicacionNaveTanque=GetActorLocation();
+	FVector UbicacionEscudo=UbicacionNaveTanque+FVector(200.0f, 0.0f, 0.0f);
+	Escudo=GetWorld()->SpawnActor<AEscudo>(GetActorLocation(), FRotator::ZeroRotator);*/
 }
 
 void ANaveTanque::Obligacion()
@@ -63,7 +84,7 @@ void ANaveTanque::Obligacion()
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("NaveTanque::Obligacion"));
 }
 
-FString ANaveTanque::TituloAstros()
+FString ANaveTanque::TituloNaves()
 {
     return "Nave Tanque";
 }

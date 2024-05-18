@@ -92,7 +92,7 @@ void ANaveFugaz::Obligacion()
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("NaveFugaz::Obligacion"));
 }
 
-FString ANaveFugaz::TituloAstros()
+FString ANaveFugaz::TituloNaves()
 {
 	return "NaveFugaz";
 }

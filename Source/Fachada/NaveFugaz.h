@@ -37,5 +37,5 @@ public:
 	void Curarse() override;
 
 	void Obligacion() override;
-	FString TituloAstros() override;
+	FString TituloNaves() override;
 };

@@ -1,14 +1,6 @@
 C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Development\Fachada\Definitions.Fachada.h
 C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\SpawnFacade.h
 C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\SpawnFacade.generated.h
-C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\NaveEnemiga.h
-C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\NaveEnemiga.generated.h
-C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\NaveCaza.h
-C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\NaveCaza.generated.h
-C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\NaveTanque.h
-C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\NaveTanque.generated.h
-C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\NaveFugaz.h
-C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\NaveFugaz.generated.h
 C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\Obstaculo.h
 C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\Obstaculo.generated.h
 C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\Meteoro.h
@@ -19,3 +11,9 @@ C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\Capsulas.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/StaticMeshActor.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
 C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\Capsulas.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\CapsulaVida.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\CapsulaVida.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\CapsulaVelocidad.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\CapsulaVelocidad.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\CapsulaArma.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\CapsulaArma.generated.h

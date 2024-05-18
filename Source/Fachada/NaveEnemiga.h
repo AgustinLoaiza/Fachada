@@ -44,7 +44,7 @@ public:
 
 public:
 	virtual void Obligacion() PURE_VIRTUAL(AAccionesFacade::Obligacion;);
-	virtual FString TituloAstros() PURE_VIRTUAL(AAccionesFacade::TituloAstros, return "";);
+	virtual FString TituloNaves() PURE_VIRTUAL(AAccionesFacade::TituloAstros, return "";);
 
 
 	bool bcanMove = false;

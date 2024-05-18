@@ -4,16 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Capsula.generated.h"
+#include "Escudo.generated.h"
 
 UCLASS()
-class FACHADA_API ACapsula : public AActor
+class FACHADA_API AEscudo : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	ACapsula();
+	AEscudo();
 
 protected:
 	// Called when the game starts or when spawned
@@ -24,6 +24,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	void AgarrarCapsula();
-	void SoltarCapsula();
+	UStaticMeshComponent* MeshEscudo;
+
+	int DurabilidadEscudo = 25;
+
+	void Durabilidad();
 };

@@ -28,11 +28,9 @@ public:
 
 	FTimerHandle TimerHandle_ShotTimerExpired;
 
-	void ShotTimerExpired();
+	class AEscudo* Escudo;
 
-private:
-	float CentroX = 0.0f;  // Coordenada X del centro de la circunferencia
-	float CentroY = 0.0f;  // Coordenada Y del centro de la circunferencia
+	void ShotTimerExpired();
 
 public: 
 	void Mover(float DeltaTime) override;
@@ -41,5 +39,5 @@ public:
 	void Curarse() override;
 
 	void Obligacion() override;
-	FString TituloAstros() override;
+	FString TituloNaves() override;
 };

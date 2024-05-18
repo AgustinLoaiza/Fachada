@@ -29,9 +29,6 @@ public:
 	UStaticMeshComponent* mallaObstaculo;
 
 protected:
-	float danio;
-	float tiempoGeneracion;
-
 	float velocidad;
 
 	float limiteCaida;
@@ -39,10 +36,8 @@ protected:
 	FVector posicion;
 
 public:
-	void energia() PURE_VIRTUAL(AObstaculo::energia,);
 	void mover(float DeltaTime) PURE_VIRTUAL(AObstaculo::mover,);
 
 public:
-	/*void Obligacion() override;
-	FString TituloAstros() override;*/
+	
 };
