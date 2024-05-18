@@ -13,5 +13,7 @@ UCLASS()
 class FACHADA_API ACapsulaVelocidad : public ACapsulas
 {
 	GENERATED_BODY()
+public:
+	ACapsulaVelocidad();
 	
 };

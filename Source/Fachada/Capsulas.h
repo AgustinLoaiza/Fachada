@@ -20,4 +20,14 @@ public:
 
 	virtual void PickUp();
 	virtual void PutDown(FTransform TargetLocation);
+	void Mover(float DeltaTime);
+
+protected:
+	float tiempoGeneracion;
+
+	float velocidad;
+
+	float limiteCaida;
+
+	FVector posicion;
 };

@@ -2,6 +2,8 @@
 
 
 #include "Obstaculo.h"
+#include "Meteoro.h"
+#include "Cometa.h"
 
 // Sets default values
 AObstaculo::AObstaculo()
@@ -25,22 +27,45 @@ void AObstaculo::Tick(float DeltaTime)
 
 }
 
+void AObstaculo::GenerarMeteoros()
+{
+	for (int i = 0; i < 7; i++)
+	{
+		FVector SpawnLocation = FVector(FMath::RandRange(-600.0f, -500.0f), FMath::RandRange(-1000.0f, 1000.0f), 0.0f);
+		AMeteoro* NewMeteoro = GetWorld()->SpawnActor<AMeteoro>(AMeteoro::StaticClass(), SpawnLocation, FRotator::ZeroRotator);
+		MeteorosCometas.Add(SpawnLocation, NewMeteoro);
+	}
+}
 
-//void AObstaculo::energia()
-//{
-//}
-//
-//void AObstaculo::mover(float DeltaTime)
-//{
-//}
+void AObstaculo::GenerarCometas()
+{
+	for (int i = 0; i < 3; i++)
+	{
+		FVector SpawnLocation = FVector(FMath::RandRange(-400.0f, 0.0f), FMath::RandRange(-1000.0f, 1000.0f), 0.0f);
+		ACometa* NewObstacle = GetWorld()->SpawnActor<ACometa>(ACometa::StaticClass(), SpawnLocation, FRotator::ZeroRotator);
+		MeteorosCometas.Add(SpawnLocation, NewObstacle);
+	}
+}
 
-//void AObstaculo::Obligacion()
-//{
-//	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Crear Obstaculos"), *TituloAstros()));
-//}
-//
-//FString AObstaculo::TituloAstros()
-//{
-//	return "Obstaculo";
-//}
+void AObstaculo::CrearOrden(const FString& _Orden)
+{
+	if (_Orden == "Meteoro")
+	{
+		GenerarMeteoros();
+	}
+	else if (_Orden == "Cometa")
+	{
+		GenerarCometas();
+	}
+}
+
+void AObstaculo::RecibirOrden(const TArray<FString>& _Orden)
+{
+	for(const FString& Orden : _Orden)
+	{
+		CrearOrden(Orden);
+	}
+}
+
+
 

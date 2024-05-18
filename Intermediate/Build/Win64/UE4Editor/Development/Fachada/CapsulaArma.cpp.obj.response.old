@@ -265,9 +265,9 @@
 /FI"C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\FachadaEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
 /Yu"C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\FachadaEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
 /Fp"C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\FachadaEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\FachadaGameMode.cpp"
+"C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\CapsulaArma.cpp"
 /FI"C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Development\Fachada\Definitions.Fachada.h"
-/Fo"C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Development\Fachada\FachadaGameMode.cpp.obj"
+/Fo"C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Development\Fachada\CapsulaArma.cpp.obj"
 /TP
 /GR-
 /W4

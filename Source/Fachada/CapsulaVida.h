@@ -13,5 +13,8 @@ UCLASS()
 class FACHADA_API ACapsulaVida : public ACapsulas
 {
 	GENERATED_BODY()
+
+public:
+	ACapsulaVida();
 	
 };

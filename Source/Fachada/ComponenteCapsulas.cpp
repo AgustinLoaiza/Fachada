@@ -32,3 +32,13 @@ void UComponenteCapsulas::TickComponent(float DeltaTime, ELevelTick TickType, FA
 	// ...
 }
 
+int32 UComponenteCapsulas::AddToInventory(ACapsulas* ActorToAdd)
+{
+	return CurrentInventory.Add(ActorToAdd);
+}
+
+void UComponenteCapsulas::RemoveFromInventory(ACapsulas* ActorToRemove)
+{
+	CurrentInventory.Remove(ActorToRemove);
+}
+
