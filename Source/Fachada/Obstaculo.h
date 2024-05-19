@@ -4,11 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-//#include "AccionesFacade.h"
 #include "Obstaculo.generated.h"
 
 UCLASS()
-class FACHADA_API AObstaculo : public AActor //public AAccionesFacade 
+class FACHADA_API AObstaculo : public AActor 
 {
 	GENERATED_BODY()
 	
@@ -31,11 +30,11 @@ public:
 protected:
 	float velocidad;
 
-	float limiteCaida;
+	float limiteY;
 
 	FVector posicion;
 
 
-	void mover(float DeltaTime) PURE_VIRTUAL(AObstaculo::mover,);
+	virtual void mover(float DeltaTime) PURE_VIRTUAL(AObstaculo::mover,);
 
 };

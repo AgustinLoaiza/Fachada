@@ -103,8 +103,6 @@ public:
 	UPROPERTY()
 	UComponenteCapsulas* Capsulas;
 	UFUNCTION()
-	void DropItem();
-	UFUNCTION()
 	void TakeItem(ACapsulas* InventoryItem);
 
 	UFUNCTION()

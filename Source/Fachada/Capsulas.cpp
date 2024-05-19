@@ -36,3 +36,9 @@ void ACapsulas::Mover(float DeltaTime)
 		SetActorLocation(FVector(Posicion.X, Posicion.Y, 1500.0f));
 	}
 }
+
+void ACapsulas::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	Mover(DeltaTime);
+}

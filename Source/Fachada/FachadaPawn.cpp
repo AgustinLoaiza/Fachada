@@ -39,7 +39,7 @@ AFachadaPawn::AFachadaPawn()
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
 	CameraBoom->SetUsingAbsoluteRotation(true); // Don't want arm to rotate when ship does
-	CameraBoom->TargetArmLength = 1200.f;
+	CameraBoom->TargetArmLength = 1200.f; 
 	CameraBoom->SetRelativeRotation(FRotator(-80.f, 0.f, 0.f));
 	CameraBoom->bDoCollisionTest = false; // Don't want to pull camera in when it collides with level
 
@@ -55,6 +55,7 @@ AFachadaPawn::AFachadaPawn()
 	FireRate = 0.1f;
 	bCanFire = true;
 
+	//Inicializamos el componente de actor
 	Capsulas= CreateDefaultSubobject<UComponenteCapsulas>(TEXT("Capsulas"));
 }
 
@@ -103,37 +104,70 @@ void AFachadaPawn::Tick(float DeltaSeconds)
 
 	// Try and fire a shot
 	FireShot(FireDirection);
+
+	//Logica de administracion de vida y energia
+
+	if (energia <= 0)
+	{
+		vida--;
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("Vida: " + FString::FromInt(vida)));
+		SetActorLocation(FVector(0.0f, 0.0f, 215.0f));
+		energia = 100;
+		cargador = 50;
+		MoveSpeed = 1000.0f;
+		DisparoMultiple = false;
+	}
+	if (vida <= 0)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Has muerto"));
+		Destroy();
+	}
 }
 
 void AFachadaPawn::FireShot(FVector FireDirection)
 {
-	// If it's ok to fire again
-	if (bCanFire == true)
+	if (cargador>0)
 	{
-		// If we are pressing fire stick in a direction
-		if (FireDirection.SizeSquared() > 0.0f)
+		// If it's ok to fire again
+		if (bCanFire == true)
 		{
-			const FRotator FireRotation = FireDirection.Rotation();
-			// Spawn projectile at an offset from this pawn
-			const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
-
-			UWorld* const World = GetWorld();
-			if (World != nullptr)
+			// If we are pressing fire stick in a direction
+			if (FireDirection.SizeSquared() > 0.0f)
 			{
-				// spawn the projectile
-				World->SpawnActor<AFachadaProjectile>(SpawnLocation, FireRotation);
+				const FRotator FireRotation = FireDirection.Rotation();
+				// Spawn projectile at an offset from this pawn
+				const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
+
+				UWorld* const World = GetWorld();
+				if (World != nullptr)
+				{
+					// spawn the projectile
+					World->SpawnActor<AFachadaProjectile>(SpawnLocation, FireRotation);
+					//Disparo multiple
+					if (DisparoMultiple)
+					{
+						const FRotator FireRotation2 = FireDirection.Rotation() + FRotator(10.0f, 30.0f, 0.0f);
+						const FRotator FireRotation3 = FireDirection.Rotation() + FRotator(10.0f, -30.0f, 0.0f);
+						const FVector SpawnLocation2 = GetActorLocation() + FVector(10.0f, 30.0f, 0.0f) + FireRotation2.RotateVector(GunOffset);
+						const FVector SpawnLocation3 = GetActorLocation() + FVector(10.0f, -30.0f, 0.0f) + FireRotation3.RotateVector(GunOffset);
+						World->SpawnActor<AFachadaProjectile>(SpawnLocation2, FireRotation2); 
+						World->SpawnActor<AFachadaProjectile>(SpawnLocation3, FireRotation3); 
+					}
+				}
+				//Reducimos las balas del cargador
+				cargador--;
+
+				bCanFire = false;
+				World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AFachadaPawn::ShotTimerExpired, FireRate);
+
+				// try and play the sound if specified
+				if (FireSound != nullptr)
+				{
+					UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+				}
+
+				bCanFire = false;
 			}
-
-			bCanFire = false;
-			World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AFachadaPawn::ShotTimerExpired, FireRate);
-
-			// try and play the sound if specified
-			if (FireSound != nullptr)
-			{
-				UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
-			}
-
-			bCanFire = false;
 		}
 	}
 }
@@ -143,30 +177,39 @@ void AFachadaPawn::ShotTimerExpired()
 	bCanFire = true;
 }
 
-void AFachadaPawn::DropItem()
-{
-}
-
 void AFachadaPawn::TakeItem(ACapsulas* InventoryItem)
 {
 	InventoryItem->PickUp();
 	Capsulas->AddToInventory(InventoryItem);
 	if (InventoryItem->IsA(ACapsulaVida::StaticClass()))
 	{
-		
+		vida++;
 	}
 	else if (InventoryItem->IsA(ACapsulaArma::StaticClass()))
 	{
-		
+		DisparoMultiple=true;
 	}
 	else if (InventoryItem->IsA(ACapsulaVelocidad::StaticClass()))
 	{
-		
+		MoveSpeed = 2000.0f;
 	}
 }
 
 void AFachadaPawn::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
 {
+	AMeteoro* Meteoro = Cast<AMeteoro>(Other);
+	if (Meteoro)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Energia: " + FString::FromInt(energia)));
+		energia -= 10;
+		
+	}
+	ACometa* Cometa = Cast<ACometa>(Other);
+	if (Cometa)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Energia: " + FString::FromInt(energia))); 
+		energia -= 20;
+	}
 	if (Other->IsA(ACapsulas::StaticClass()))
 	{
 		ACapsulas* Capsula = Cast<ACapsulas>(Other);

@@ -26,7 +26,7 @@ public:
 public:
 	UStaticMeshComponent* MeshEscudo;
 
-	int DurabilidadEscudo = 25;
+	int DurabilidadEscudo = 50;
 
 	void Durabilidad();
 };

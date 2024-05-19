@@ -51,44 +51,14 @@ void EmptyLinkFunctionForGeneratedCodeFachadaPawn() {}
 		P_THIS->TakeItem(Z_Param_InventoryItem);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AFachadaPawn::execDropItem)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->DropItem();
-		P_NATIVE_END;
-	}
 	void AFachadaPawn::StaticRegisterNativesAFachadaPawn()
 	{
 		UClass* Class = AFachadaPawn::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "DropItem", &AFachadaPawn::execDropItem },
 			{ "NotifyHit", &AFachadaPawn::execNotifyHit },
 			{ "TakeItem", &AFachadaPawn::execTakeItem },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_AFachadaPawn_DropItem_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFachadaPawn_DropItem_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "FachadaPawn.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFachadaPawn_DropItem_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFachadaPawn, nullptr, "DropItem", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFachadaPawn_DropItem_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AFachadaPawn_DropItem_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AFachadaPawn_DropItem()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFachadaPawn_DropItem_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AFachadaPawn_NotifyHit_Statics
 	{
@@ -263,7 +233,6 @@ void EmptyLinkFunctionForGeneratedCodeFachadaPawn() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Fachada,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AFachadaPawn_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AFachadaPawn_DropItem, "DropItem" }, // 4077145271
 		{ &Z_Construct_UFunction_AFachadaPawn_NotifyHit, "NotifyHit" }, // 941810093
 		{ &Z_Construct_UFunction_AFachadaPawn_TakeItem, "TakeItem" }, // 440194288
 	};
@@ -391,7 +360,7 @@ void EmptyLinkFunctionForGeneratedCodeFachadaPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFachadaPawn, 1291056569);
+	IMPLEMENT_CLASS(AFachadaPawn, 1449737841);
 	template<> FACHADA_API UClass* StaticClass<AFachadaPawn>()
 	{
 		return AFachadaPawn::StaticClass();

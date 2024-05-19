@@ -13,5 +13,14 @@ UCLASS()
 class FACHADA_API ACometa : public AObstaculo
 {
 	GENERATED_BODY()
+
+public:
+	ACometa();
+
+public:
+	void Tick(float DeltaTime) override;
+
+public:
+	void mover(float DeltaTime) override;
 	
 };

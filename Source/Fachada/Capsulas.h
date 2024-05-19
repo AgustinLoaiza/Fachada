@@ -23,6 +23,9 @@ public:
 	void Mover(float DeltaTime);
 
 protected:
+	virtual void Tick(float DeltaTime) override;
+
+protected:
 	float tiempoGeneracion;
 
 	float velocidad;

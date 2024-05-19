@@ -16,4 +16,11 @@ class FACHADA_API AMeteoro : public AObstaculo
 	
 public:
 	AMeteoro();
+
+public:
+	void Tick(float DeltaTime) override;
+	
+
+public:
+	void mover(float DeltaTime) override;
 };

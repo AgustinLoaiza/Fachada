@@ -5,3 +5,39 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFra
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\FachadaPawn.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\ComponenteCapsulas.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\ComponenteCapsulas.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\Capsulas.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/StaticMeshActor.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\Capsulas.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\CapsulaArma.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\CapsulaArma.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\CapsulaVelocidad.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\CapsulaVelocidad.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\CapsulaVida.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\CapsulaVida.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\Obstaculo.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\Obstaculo.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\Meteoro.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\Meteoro.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\Cometa.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\Cometa.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\Escudo.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\Escudo.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\FachadaPawn.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\NaveEnemiga.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\NaveEnemiga.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\NaveCaza.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\NaveCaza.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\NaveFugaz.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\NaveFugaz.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\NaveTanque.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\NaveTanque.generated.h

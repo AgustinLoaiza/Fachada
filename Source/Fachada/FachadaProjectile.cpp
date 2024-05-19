@@ -6,6 +6,12 @@
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Engine/StaticMesh.h"
+#include "FachadaPawn.h"
+#include "Escudo.h"
+#include "NaveEnemiga.h"
+#include "NaveCaza.h"
+#include "NaveFugaz.h"
+#include "NaveTanque.h"
 
 AFachadaProjectile::AFachadaProjectile() 
 {
@@ -39,6 +45,37 @@ void AFachadaProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor,
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr) && OtherComp->IsSimulatingPhysics())
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 20.0f, GetActorLocation());
+	}
+
+	AFachadaPawn* Pawn = Cast<AFachadaPawn>(OtherActor);
+	if (Pawn != nullptr)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Energia: " + FString::FromInt(Pawn->energia)));
+		Pawn->energia -= 10;
+	}
+
+	AEscudo* Escudo = Cast<AEscudo>(OtherActor);
+	if (Escudo != nullptr)
+	{
+		Escudo->Durabilidad();
+	}
+
+	ANaveCaza* NaveCaza = Cast<ANaveCaza>(OtherActor);
+	if (NaveCaza != nullptr)
+	{
+		NaveCaza->RecibirDanio();
+	}
+
+	ANaveFugaz* NaveFugaz = Cast<ANaveFugaz>(OtherActor);
+	if (NaveFugaz != nullptr)
+	{
+		NaveFugaz->RecibirDanio();
+	}
+
+	ANaveTanque* NaveTanque = Cast<ANaveTanque>(OtherActor);
+	if (NaveTanque != nullptr)
+	{
+		NaveTanque->RecibirDanio();
 	}
 
 	Destroy();

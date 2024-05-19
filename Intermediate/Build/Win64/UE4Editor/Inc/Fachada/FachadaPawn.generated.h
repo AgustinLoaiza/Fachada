@@ -22,15 +22,13 @@ class ACapsulas;
 #define Fachada_Source_Fachada_FachadaPawn_h_22_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execNotifyHit); \
-	DECLARE_FUNCTION(execTakeItem); \
-	DECLARE_FUNCTION(execDropItem);
+	DECLARE_FUNCTION(execTakeItem);
 
 
 #define Fachada_Source_Fachada_FachadaPawn_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execNotifyHit); \
-	DECLARE_FUNCTION(execTakeItem); \
-	DECLARE_FUNCTION(execDropItem);
+	DECLARE_FUNCTION(execTakeItem);
 
 
 #define Fachada_Source_Fachada_FachadaPawn_h_22_INCLASS_NO_PURE_DECLS \
