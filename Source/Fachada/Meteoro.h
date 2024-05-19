@@ -14,4 +14,6 @@ class FACHADA_API AMeteoro : public AObstaculo
 {
 	GENERATED_BODY()
 	
+public:
+	AMeteoro();
 };

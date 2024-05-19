@@ -1,0 +1,11 @@
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Development\Fachada\Definitions.Fachada.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\AgujeroNegro.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\FuerzaNatural.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\FuerzaNatural.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\AgujeroNegro.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\Meteoro.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\Obstaculo.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\Obstaculo.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\Meteoro.generated.h
+C:\Users\User\Desktop\Facade\Fachada\Source\Fachada\Cometa.h
+C:\Users\User\Desktop\Facade\Fachada\Intermediate\Build\Win64\UE4Editor\Inc\Fachada\Cometa.generated.h

@@ -19,24 +19,33 @@ ANaveFugaz::ANaveFugaz()
 	FireRate = 1.5f;
 }
 
+void ANaveFugaz::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	Mover(DeltaTime);
+	Disparar(FVector(-1.0f, 0.0f, 0.0f));
+}
+
 void ANaveFugaz::Mover(float DeltaTime)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("NaveFugaz::Mover"));
-	float Amplitud = 2.0f;
-	float Frecuencia = 1.0f;
-	float Tiempo = GetWorld()->GetTimeSeconds();  // Obtener el tiempo actual del juego
+	if (bcanMove)
+	{
+		float Amplitud = 2.0f;
+		float Frecuencia = 1.0f;
+		float Tiempo = GetWorld()->GetTimeSeconds();  // Obtener el tiempo actual del juego
 
-	// Obtener la ubicación actual del actor
-	FVector Coordenada = GetActorLocation(); 
+		// Obtener la ubicación actual del actor
+		FVector Coordenada = GetActorLocation();
 
-	// Calcular el desplazamiento en zigzag en el eje Y
-	float ZigZagY = FMath::Sin(Tiempo * Frecuencia) * Amplitud; 
+		// Calcular el desplazamiento en zigzag en el eje Y
+		float ZigZagY = FMath::Sin(Tiempo * Frecuencia) * Amplitud;
 
-	// Calcular la nueva ubicación
-	FVector NewLocation = FVector(Coordenada.X - velocidad * DeltaTime, Coordenada.Y + ZigZagY, Coordenada.Z); 
+		// Calcular la nueva ubicación
+		FVector NewLocation = FVector(Coordenada.X - velocidad +ZigZagY * DeltaTime, Coordenada.Y + ZigZagY, Coordenada.Z);
 
-	// Establecer la nueva ubicación del actor
-	SetActorLocation(NewLocation); 
+		// Establecer la nueva ubicación del actor
+		SetActorLocation(NewLocation);
+	}
 }
 
 void ANaveFugaz::Disparar(FVector FireDirection)

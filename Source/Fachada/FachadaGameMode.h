@@ -23,7 +23,17 @@ public:
 public:
 	class AAccionesFacade* AccionesFacade;
 
-	float Temporizador;
+	float Temporizador1;
+	float Temporizador2;
+	float Temporizador3;
+
+	bool bcanAction1;
+	bool bcanAction2;
+	bool bcanAction3;
+
+public:
+
+	class ASpawnFacade* SpawnFacade;
 };
 
 

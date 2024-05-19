@@ -35,14 +35,7 @@ protected:
 
 	FVector posicion;
 
-	TMap<FVector, AActor*>MeteorosCometas;
 
-public:
-	void GenerarMeteoros();
-	void GenerarCometas();
 	void mover(float DeltaTime) PURE_VIRTUAL(AObstaculo::mover,);
 
-public:
-	void RecibirOrden(const TArray<FString>& _Orden);
-	void CrearOrden(const FString& _Orden);
 };

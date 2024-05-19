@@ -85,6 +85,7 @@ void AAccionesFacade::EstrategiaDefensiva()
 {
 	Acciones.Empty();
 	Acciones.Add("Energia");
+	Acciones.Add("Moverse");
 	RealizarAcciones(Acciones, Naves);
 }
 

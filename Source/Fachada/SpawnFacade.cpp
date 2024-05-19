@@ -9,6 +9,9 @@
 #include "CapsulaVida.h"
 #include "CapsulaVelocidad.h"
 #include "CapsulaArma.h"
+#include "FuerzaNatural.h"
+#include "AgujeroNegro.h"
+#include "AgujeroBlanco.h"
 
 
 // Sets default values
@@ -17,12 +20,6 @@ ASpawnFacade::ASpawnFacade()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	//Incializamos los arrays
-	Obstaculos = TArray<AObstaculo*>();
-	Capsulas = TArray<ACapsulas*>();
-
-	Astros = TArray<FString>();
-	Comestibles = TArray<FString>();
 }
 
 // Called when the game starts or when spawned
@@ -30,11 +27,14 @@ void ASpawnFacade::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	Obstaculo=GetWorld()->SpawnActor<AObstaculo>(AObstaculo::StaticClass());
-	Obstaculos.Add(Obstaculo);
+	Fenomeno=TArray<AFuerzaNatural*>();
+	Tormenta=TArray<FString>();
 
-	Capsula = GetWorld()->SpawnActor<ACapsulas>(ACapsulas::StaticClass());
-	Capsulas.Add(Capsula);
+	AgujeroNegro = GetWorld()->SpawnActor<AAgujeroNegro>(AAgujeroNegro::StaticClass());
+	AgujeroBlanco = GetWorld()->SpawnActor<AAgujeroBlanco>(AAgujeroBlanco::StaticClass());
+
+	Fenomeno.Add(AgujeroNegro);
+	Fenomeno.Add(AgujeroBlanco); 
 }
 
 // Called every frame
@@ -44,16 +44,36 @@ void ASpawnFacade::Tick(float DeltaTime)
 
 }
 
-void ASpawnFacade::SpawnearObstaculos()
+void ASpawnFacade::lluviadeMeteoritos()
 {
+	Tormenta.Empty();
+	Tormenta.Add("Meteoro");
+	PermitirTormenta(Tormenta,Fenomeno);
 }
 
-void ASpawnFacade::SpawnearCapsulas()
+void ASpawnFacade::lluviadeCometas()
 {
+	Tormenta.Empty();
+	Tormenta.Add("Cometa");
+	PermitirTormenta(Tormenta,Fenomeno);
 }
 
-void ASpawnFacade::PerformTask(TArray<class AOBstaculos*>_Obstaculos, TArray<class ACapsulas*>_Capsulas, TArray<FString>_Astros, TArray<FString>_Comestibles)
+void ASpawnFacade::dropsCapsulas()
 {
+	Tormenta.Empty(); 
+	Tormenta.Add("Capsula"); 
+	PermitirTormenta(Tormenta,Fenomeno); 
 }
+
+void ASpawnFacade::PermitirTormenta(TArray<FString> _Tormenta, TArray<class AFuerzaNatural*> _Fenomeno)
+{
+	for(AFuerzaNatural* Desastre : _Fenomeno)
+	{
+		Desastre->RecibirOrden(_Tormenta);
+	}
+}
+
+
+
 
 

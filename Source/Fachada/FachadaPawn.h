@@ -4,7 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "ComponenteCapsulas.h"
+#include "Capsulas.h"
+#include "CapsulaArma.h"
+#include "CapsulaVelocidad.h"
+#include "CapsulaVida.h"
+#include "Obstaculo.h"
+#include "Meteoro.h"
+#include "Cometa.h"
+#include "Escudo.h"
 #include "FachadaPawn.generated.h"
+
 
 UCLASS(Blueprintable)
 class AFachadaPawn : public APawn
@@ -74,5 +84,30 @@ public:
 	FORCEINLINE class UCameraComponent* GetCameraComponent() const { return CameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+
+public:
+	//Le damos un cargador a nuestra Nave
+	int32 cargador = 50;
+
+	//Le damos vidas a nuestra Nave
+	int32 vida = 3;
+
+	//Le damos Combustible a la nave
+	int32 energia = 100;
+
+	//Llave para ingresar al codigo de disparo multiple
+	bool DisparoMultiple = false;
+
+public:
+	//Interaccion de Pawn con la Gasolinera
+	UPROPERTY()
+	UComponenteCapsulas* Capsulas;
+	UFUNCTION()
+	void DropItem();
+	UFUNCTION()
+	void TakeItem(ACapsulas* InventoryItem);
+
+	UFUNCTION()
+	virtual void NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit) override;
 };
 

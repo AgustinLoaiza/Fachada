@@ -38,16 +38,17 @@ protected:
 public:
 
 	virtual void Mover(float DeltaTime) PURE_VIRTUAL(ANaveEnemiga::Mover,); 
+	virtual void MoverExpired();
 	virtual void Disparar(FVector FireDiretion) PURE_VIRTUAL(ANaveEnemiga::Disparar,);
 	virtual void RecibirDanio() PURE_VIRTUAL(ANaveEnemiga::RecibirDanio,); 
 	virtual void Curarse() PURE_VIRTUAL(ANaveEnemiga::Curarse,);
 
 public:
-	virtual void Obligacion() PURE_VIRTUAL(AAccionesFacade::Obligacion;);
-	virtual FString TituloNaves() PURE_VIRTUAL(AAccionesFacade::TituloAstros, return "";);
+	virtual void Obligacion() PURE_VIRTUAL(ANaveEnemiga::Obligacion;);
+	virtual FString TituloNaves() PURE_VIRTUAL(ANaveEnemiga::TituloAstros, return "";); 
 
 
-	bool bcanMove = false;
+	bool bcanMove;
 
 public:
 	void ValidarAcciones(const FString& _Accion);

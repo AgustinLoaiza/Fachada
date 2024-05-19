@@ -12,6 +12,10 @@
 #include "Engine/StaticMesh.h"
 #include "Kismet/GameplayStatics.h"
 #include "Sound/SoundBase.h"
+#include "Capsulas.h"
+#include "CapsulaVida.h"
+#include "CapsulaArma.h"
+#include "CapsulaVelocidad.h" 
 
 const FName AFachadaPawn::MoveForwardBinding("MoveForward");
 const FName AFachadaPawn::MoveRightBinding("MoveRight");
@@ -50,6 +54,8 @@ AFachadaPawn::AFachadaPawn()
 	GunOffset = FVector(90.f, 0.f, 0.f);
 	FireRate = 0.1f;
 	bCanFire = true;
+
+	Capsulas= CreateDefaultSubobject<UComponenteCapsulas>(TEXT("Capsulas"));
 }
 
 void AFachadaPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -135,5 +141,36 @@ void AFachadaPawn::FireShot(FVector FireDirection)
 void AFachadaPawn::ShotTimerExpired()
 {
 	bCanFire = true;
+}
+
+void AFachadaPawn::DropItem()
+{
+}
+
+void AFachadaPawn::TakeItem(ACapsulas* InventoryItem)
+{
+	InventoryItem->PickUp();
+	Capsulas->AddToInventory(InventoryItem);
+	if (InventoryItem->IsA(ACapsulaVida::StaticClass()))
+	{
+		
+	}
+	else if (InventoryItem->IsA(ACapsulaArma::StaticClass()))
+	{
+		
+	}
+	else if (InventoryItem->IsA(ACapsulaVelocidad::StaticClass()))
+	{
+		
+	}
+}
+
+void AFachadaPawn::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+{
+	if (Other->IsA(ACapsulas::StaticClass()))
+	{
+		ACapsulas* Capsula = Cast<ACapsulas>(Other);
+		TakeItem(Capsula);
+	}
 }
 

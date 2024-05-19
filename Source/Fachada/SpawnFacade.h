@@ -25,24 +25,15 @@ public:
 
 protected:
 
-	UPROPERTY(VisibleAnywhere, Category = "FachadaSpawn")
-	class AObstaculo* Obstaculo;
-	UPROPERTY(VisibleAnywhere, Category = "FachadaSpawn")
-	class ACapsulas* Capsula;
+	TArray<FString> Tormenta;
+	TArray<class AFuerzaNatural*> Fenomeno;
 
-	TArray<class AObstaculo*> Obstaculos;
-	TArray<class ACapsulas*> Capsulas;
-
-	UPROPERTY(EditAnywhere, Category = "FachadaSpawn")
-	TArray<FString> Astros;
-	UPROPERTY(EditAnywhere, Category = "FachadaSpawn")
-	TArray<FString> Comestibles;
-
+	class AAgujeroNegro* AgujeroNegro;
+	class AAgujeroBlanco* AgujeroBlanco;
 
 public:
-	void SpawnearObstaculos();
-	void SpawnearCapsulas();
-
-private:
-	void PerformTask(TArray<class AOBstaculos*>_Obstaculos, TArray<class ACapsulas*>_Capsulas, TArray<FString>_Astros, TArray<FString>_Comestibles);
+	void PermitirTormenta(TArray<FString>_Tormenta, TArray<class AFuerzaNatural*>_Fenomeno);
+	void lluviadeMeteoritos();
+	void lluviadeCometas();
+	void dropsCapsulas();
 };

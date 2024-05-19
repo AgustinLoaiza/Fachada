@@ -58,13 +58,7 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASpawnFacade)
 
 
-#define Fachada_Source_Fachada_SpawnFacade_h_12_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__Obstaculo() { return STRUCT_OFFSET(ASpawnFacade, Obstaculo); } \
-	FORCEINLINE static uint32 __PPO__Capsula() { return STRUCT_OFFSET(ASpawnFacade, Capsula); } \
-	FORCEINLINE static uint32 __PPO__Astros() { return STRUCT_OFFSET(ASpawnFacade, Astros); } \
-	FORCEINLINE static uint32 __PPO__Comestibles() { return STRUCT_OFFSET(ASpawnFacade, Comestibles); }
-
-
+#define Fachada_Source_Fachada_SpawnFacade_h_12_PRIVATE_PROPERTY_OFFSET
 #define Fachada_Source_Fachada_SpawnFacade_h_9_PROLOG
 #define Fachada_Source_Fachada_SpawnFacade_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

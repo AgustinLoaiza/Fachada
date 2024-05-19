@@ -17,6 +17,8 @@ class FACHADA_API ANaveCaza : public ANaveEnemiga
 public: 
 	ANaveCaza();
 
+	virtual void Tick(float DeltaTime) override;
+
 public:
 	uint32 bCanFire : 1;
 

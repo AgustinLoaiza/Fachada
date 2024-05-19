@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Fachada.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{CC831F40-9A15-4BBD-A75B-A54CA774132F}</UniqueIdentifier>
+      <UniqueIdentifier>{BB8A28B8-F2E4-4BA9-94E1-C149AAE6AB5D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Fachada.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{FE0186FD-B0C6-4555-AA1B-F13866F88109}</UniqueIdentifier>
+      <UniqueIdentifier>{42883EFB-D9FD-4A7B-A93A-EB9C2F4E15D8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,12 +32,24 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Fachada">
-      <UniqueIdentifier>{00782C27-775B-4993-8DCC-2A766F334ADE}</UniqueIdentifier>
+      <UniqueIdentifier>{395D5FC3-9CCE-4310-9038-997E6C3728BC}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Fachada\AccionesFacade.cpp">
       <Filter>Source\Fachada</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Fachada\AccionesFacade.h">
+      <Filter>Source\Fachada</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Fachada\AgujeroBlanco.cpp">
+      <Filter>Source\Fachada</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Fachada\AgujeroBlanco.h">
+      <Filter>Source\Fachada</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Fachada\AgujeroNegro.cpp">
+      <Filter>Source\Fachada</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Fachada\AgujeroNegro.h">
       <Filter>Source\Fachada</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Fachada\CapsulaArma.cpp">
@@ -107,6 +119,12 @@
       <Filter>Source\Fachada</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Fachada\FachadaProjectile.h">
+      <Filter>Source\Fachada</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Fachada\FuerzaNatural.cpp">
+      <Filter>Source\Fachada</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Fachada\FuerzaNatural.h">
       <Filter>Source\Fachada</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Fachada\Meteoro.cpp">

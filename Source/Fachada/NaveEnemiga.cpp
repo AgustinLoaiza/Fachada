@@ -9,6 +9,7 @@ ANaveEnemiga::ANaveEnemiga()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	bcanMove = false;
 }
 
 // Called when the game starts or when spawned
@@ -22,20 +23,30 @@ void ANaveEnemiga::BeginPlay()
 void ANaveEnemiga::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	Mover(DeltaTime);
+}
 
+void ANaveEnemiga::MoverExpired()
+{
+	if (bcanMove==true)
+	{
+		bcanMove = false;
+	}
+	else if (bcanMove==false)
+	{
+		bcanMove = true;
+	}
 }
 
 void ANaveEnemiga::ValidarAcciones(const FString& _Acciones)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Acciones: ") + _Acciones);
 	if (_Acciones == "Disparar")
 	{
 		Disparar(FVector(-5.0f, 0.0f, 0.0f));
 	}
 	else if (_Acciones == "Moverse")
 	{
-		bcanMove = true;
-		Mover(1.0f);
+		MoverExpired();
 	}
 	else if (_Acciones == "Energia")
 	{

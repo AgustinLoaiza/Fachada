@@ -8,14 +8,25 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class ACapsulas;
 #ifdef FACHADA_ComponenteCapsulas_generated_h
 #error "ComponenteCapsulas.generated.h already included, missing '#pragma once' in ComponenteCapsulas.h"
 #endif
 #define FACHADA_ComponenteCapsulas_generated_h
 
 #define Fachada_Source_Fachada_ComponenteCapsulas_h_13_SPARSE_DATA
-#define Fachada_Source_Fachada_ComponenteCapsulas_h_13_RPC_WRAPPERS
-#define Fachada_Source_Fachada_ComponenteCapsulas_h_13_RPC_WRAPPERS_NO_PURE_DECLS
+#define Fachada_Source_Fachada_ComponenteCapsulas_h_13_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execRemoveFromInventory); \
+	DECLARE_FUNCTION(execAddToInventory);
+
+
+#define Fachada_Source_Fachada_ComponenteCapsulas_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execRemoveFromInventory); \
+	DECLARE_FUNCTION(execAddToInventory);
+
+
 #define Fachada_Source_Fachada_ComponenteCapsulas_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUComponenteCapsulas(); \

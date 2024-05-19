@@ -8,15 +8,32 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FVector;
+struct FHitResult;
+class ACapsulas;
 #ifdef FACHADA_FachadaPawn_generated_h
 #error "FachadaPawn.generated.h already included, missing '#pragma once' in FachadaPawn.h"
 #endif
 #define FACHADA_FachadaPawn_generated_h
 
-#define Fachada_Source_Fachada_FachadaPawn_h_12_SPARSE_DATA
-#define Fachada_Source_Fachada_FachadaPawn_h_12_RPC_WRAPPERS
-#define Fachada_Source_Fachada_FachadaPawn_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define Fachada_Source_Fachada_FachadaPawn_h_12_INCLASS_NO_PURE_DECLS \
+#define Fachada_Source_Fachada_FachadaPawn_h_22_SPARSE_DATA
+#define Fachada_Source_Fachada_FachadaPawn_h_22_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execNotifyHit); \
+	DECLARE_FUNCTION(execTakeItem); \
+	DECLARE_FUNCTION(execDropItem);
+
+
+#define Fachada_Source_Fachada_FachadaPawn_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execNotifyHit); \
+	DECLARE_FUNCTION(execTakeItem); \
+	DECLARE_FUNCTION(execDropItem);
+
+
+#define Fachada_Source_Fachada_FachadaPawn_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFachadaPawn(); \
 	friend struct Z_Construct_UClass_AFachadaPawn_Statics; \
@@ -25,7 +42,7 @@ public: \
 	DECLARE_SERIALIZER(AFachadaPawn)
 
 
-#define Fachada_Source_Fachada_FachadaPawn_h_12_INCLASS \
+#define Fachada_Source_Fachada_FachadaPawn_h_22_INCLASS \
 private: \
 	static void StaticRegisterNativesAFachadaPawn(); \
 	friend struct Z_Construct_UClass_AFachadaPawn_Statics; \
@@ -34,7 +51,7 @@ public: \
 	DECLARE_SERIALIZER(AFachadaPawn)
 
 
-#define Fachada_Source_Fachada_FachadaPawn_h_12_STANDARD_CONSTRUCTORS \
+#define Fachada_Source_Fachada_FachadaPawn_h_22_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AFachadaPawn(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AFachadaPawn) \
@@ -47,7 +64,7 @@ private: \
 public:
 
 
-#define Fachada_Source_Fachada_FachadaPawn_h_12_ENHANCED_CONSTRUCTORS \
+#define Fachada_Source_Fachada_FachadaPawn_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AFachadaPawn(AFachadaPawn&&); \
@@ -58,33 +75,33 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AFachadaPawn)
 
 
-#define Fachada_Source_Fachada_FachadaPawn_h_12_PRIVATE_PROPERTY_OFFSET \
+#define Fachada_Source_Fachada_FachadaPawn_h_22_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__ShipMeshComponent() { return STRUCT_OFFSET(AFachadaPawn, ShipMeshComponent); } \
 	FORCEINLINE static uint32 __PPO__CameraComponent() { return STRUCT_OFFSET(AFachadaPawn, CameraComponent); } \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(AFachadaPawn, CameraBoom); }
 
 
-#define Fachada_Source_Fachada_FachadaPawn_h_9_PROLOG
-#define Fachada_Source_Fachada_FachadaPawn_h_12_GENERATED_BODY_LEGACY \
+#define Fachada_Source_Fachada_FachadaPawn_h_19_PROLOG
+#define Fachada_Source_Fachada_FachadaPawn_h_22_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Fachada_Source_Fachada_FachadaPawn_h_12_PRIVATE_PROPERTY_OFFSET \
-	Fachada_Source_Fachada_FachadaPawn_h_12_SPARSE_DATA \
-	Fachada_Source_Fachada_FachadaPawn_h_12_RPC_WRAPPERS \
-	Fachada_Source_Fachada_FachadaPawn_h_12_INCLASS \
-	Fachada_Source_Fachada_FachadaPawn_h_12_STANDARD_CONSTRUCTORS \
+	Fachada_Source_Fachada_FachadaPawn_h_22_PRIVATE_PROPERTY_OFFSET \
+	Fachada_Source_Fachada_FachadaPawn_h_22_SPARSE_DATA \
+	Fachada_Source_Fachada_FachadaPawn_h_22_RPC_WRAPPERS \
+	Fachada_Source_Fachada_FachadaPawn_h_22_INCLASS \
+	Fachada_Source_Fachada_FachadaPawn_h_22_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Fachada_Source_Fachada_FachadaPawn_h_12_GENERATED_BODY \
+#define Fachada_Source_Fachada_FachadaPawn_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Fachada_Source_Fachada_FachadaPawn_h_12_PRIVATE_PROPERTY_OFFSET \
-	Fachada_Source_Fachada_FachadaPawn_h_12_SPARSE_DATA \
-	Fachada_Source_Fachada_FachadaPawn_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	Fachada_Source_Fachada_FachadaPawn_h_12_INCLASS_NO_PURE_DECLS \
-	Fachada_Source_Fachada_FachadaPawn_h_12_ENHANCED_CONSTRUCTORS \
+	Fachada_Source_Fachada_FachadaPawn_h_22_PRIVATE_PROPERTY_OFFSET \
+	Fachada_Source_Fachada_FachadaPawn_h_22_SPARSE_DATA \
+	Fachada_Source_Fachada_FachadaPawn_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+	Fachada_Source_Fachada_FachadaPawn_h_22_INCLASS_NO_PURE_DECLS \
+	Fachada_Source_Fachada_FachadaPawn_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

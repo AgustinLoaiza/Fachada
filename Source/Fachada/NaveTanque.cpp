@@ -20,12 +20,22 @@ ANaveTanque::ANaveTanque()
 	FireRate = 1.5f;
 }
 
+void ANaveTanque::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	Mover(DeltaTime);
+	Disparar(FVector(-1.0f, 0.0f, 0.0f));
+}
+
 void ANaveTanque::Mover(float DeltaTime)
 {
-	FVector Coordenada = GetActorLocation();
-	float posicion = velocidad * DeltaTime;
-	FVector NewLocation = FVector(Coordenada.X - velocidad, Coordenada.Y, Coordenada.Z);
-	SetActorLocation(NewLocation);
+	if (bcanMove)
+	{
+		FVector Coordenada = GetActorLocation(); 
+		float posicion = velocidad * DeltaTime; 
+		FVector NewLocation = FVector(Coordenada.X - velocidad, Coordenada.Y, Coordenada.Z); 
+		SetActorLocation(NewLocation); 
+	}
 }
 
 void ANaveTanque::Disparar(FVector FireDirection)
@@ -74,9 +84,9 @@ void ANaveTanque::Curarse()
 {
 	vida += 25;
 
-	/*FVector UbicacionNaveTanque=GetActorLocation();
-	FVector UbicacionEscudo=UbicacionNaveTanque+FVector(200.0f, 0.0f, 0.0f);
-	Escudo=GetWorld()->SpawnActor<AEscudo>(GetActorLocation(), FRotator::ZeroRotator);*/
+	FVector UbicacionNaveTanque=GetActorLocation();
+	FVector UbicacionEscudo=UbicacionNaveTanque+FVector(-200.0f, 0.0f, 0.0f);
+	Escudo=GetWorld()->SpawnActor<AEscudo>(UbicacionEscudo, FRotator::ZeroRotator); 
 }
 
 void ANaveTanque::Obligacion()

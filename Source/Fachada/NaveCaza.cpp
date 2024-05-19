@@ -19,19 +19,28 @@ ANaveCaza::ANaveCaza()
 	FireRate = 1.5f; 
 }
 
+void ANaveCaza::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	Mover(DeltaTime); 
+	Disparar(FVector(-1.0f, 0.0f, 0.0f));
+}
+
 
 void ANaveCaza::Mover(float DeltaTime)
 {
-    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("NaveCaza::Mover"));
-	FVector Coordenada = GetActorLocation();
-	float posicion = velocidad * DeltaTime;
-	FVector NewLocation = FVector(Coordenada.X-velocidad, Coordenada.Y, Coordenada.Z);
-	SetActorLocation(NewLocation);
+	if (bcanMove)
+	{
+		FVector Coordenada = GetActorLocation();
+		float posicion = velocidad * DeltaTime;
+		FVector NewLocation = FVector(Coordenada.X - velocidad, Coordenada.Y, Coordenada.Z);
+		SetActorLocation(NewLocation);
+	}
 }
+
 
 void ANaveCaza::Disparar(FVector FireDirection)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("NaveCaza::Disparar"));
 	// If it's ok to fire again
 	if (bCanFire == true)
 	{
