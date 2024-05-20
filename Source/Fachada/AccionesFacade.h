@@ -24,9 +24,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	void EstrategiaOfensiva();
-	void EstrategiaDefensiva();
-	void EstrategiaAgresiva();
+	void Atacar();
+	void Defender();
+	void Avanzar();
 
 	void RealizarAcciones(TArray<FString>_Acciones, TArray<class ANaveEnemiga*>_Naves);
 

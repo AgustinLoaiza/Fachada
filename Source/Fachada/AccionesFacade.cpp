@@ -57,7 +57,7 @@ void AAccionesFacade::Tick(float DeltaTime)
 
 }
 
-void AAccionesFacade::EstrategiaOfensiva()
+void AAccionesFacade::Atacar()
 {
 	Acciones.Empty();
 	Acciones.Add("Disparar");
@@ -65,7 +65,7 @@ void AAccionesFacade::EstrategiaOfensiva()
 	RealizarAcciones(Acciones, Naves);
 }
 
-void AAccionesFacade::EstrategiaDefensiva()
+void AAccionesFacade::Defender()
 {
 	Acciones.Empty();
 	Acciones.Add("Energia");
@@ -73,7 +73,7 @@ void AAccionesFacade::EstrategiaDefensiva()
 	RealizarAcciones(Acciones, Naves);
 }
 
-void AAccionesFacade::EstrategiaAgresiva()
+void AAccionesFacade::Avanzar()
 {
 	Acciones.Empty();
 	Acciones.Add("Disparar");

@@ -37,21 +37,21 @@ void AFachadaGameMode::Tick(float DeltaTime)
 	if (Temporizador1 >= 5 && bcanAction1==true)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Estrategia Ofensiva"));
-		AccionesFacade->EstrategiaOfensiva();
+		AccionesFacade->Atacar();
 		Temporizador1 = 0;
 		bcanAction1 = false;
 	}
 	if (Temporizador2 >=10 && bcanAction2==true)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Estrategia Defensiva"));
-		AccionesFacade->EstrategiaDefensiva();
+		AccionesFacade->Defender();
 		Temporizador2 = 0;
 		bcanAction2 = false;
 	}
 	if (Temporizador3 >= 15 && bcanAction3==true)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Estrategia Agresiva"));
-		AccionesFacade->EstrategiaAgresiva();
+		AccionesFacade->Avanzar();
 		Temporizador3 = 0;
 		bcanAction3 = false;
 	}
