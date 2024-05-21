@@ -119,7 +119,7 @@ void AFachadaPawn::Tick(float DeltaSeconds)
 	}
 	if (vida <= 0)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Has muerto"));
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Has muerto, Tengo que viajar al CHACO"));
 		Destroy();
 	}
 }

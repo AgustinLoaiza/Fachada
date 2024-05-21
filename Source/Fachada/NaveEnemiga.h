@@ -4,11 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-//#include "AccionesFacade.h"
 #include "NaveEnemiga.generated.h"
 
 UCLASS()
-class FACHADA_API ANaveEnemiga : public AActor //public AAccionesFacade 
+class FACHADA_API ANaveEnemiga : public AActor
 {
 	GENERATED_BODY()
 
